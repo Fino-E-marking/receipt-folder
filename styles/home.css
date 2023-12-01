@@ -1,0 +1,190 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  padding-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+.title{
+  background-color: black;
+  color: blue;
+  font-size: 40px;
+  font-weight: bold;
+  max-width: 1000px;
+  text-align: center;
+  padding: 10px 0px;
+  flex: 1;
+}
+.title-holder{
+  display: flex;
+  justify-content: center;
+  padding-top: 1px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+.add-cart-receipt{
+  width: 150px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.add-cart-receipt button{
+  padding: 3px 0px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.input{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  max-width: 1000px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.input div{
+  padding-left: 10px;
+}
+.add-to-cart-button{
+  background-color: blue;
+  margin-bottom: 4px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.add-receipt-button{
+  background-color: rgb(240, 84, 27) ;
+  color: white;
+  border: solid;
+  border-color: black;
+  border-width: 1px;
+  cursor: pointer;
+}
+.printe-reciept{
+  margin-top: 3px;
+  cursor: pointer;
+}
+.prices{
+  max-width: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.prices div,.cus-name-holder,.seller-name-holder{
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+}
+.amnt-div{
+  justify-content: center;
+}
+.prc-dic{
+  justify-content: end;
+}
+.cus-name-holder input,#serler-name{
+  border: none;
+  font-size: 17px;
+  width: 400px;
+  margin-top: 2px;
+  align-items: start;
+  border-bottom:  dotted;
+  padding: 0px 5px;
+  cursor: pointer;
+}
+.mc{
+  max-width: 200px;
+}
+.reciept-holder{
+  margin-top: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.reciept-book{
+  max-width: 800px;
+  min-width: 750px;
+  display: grid;
+  grid-template-rows: 100px 1fr 20px;
+}
+.R-cus-name,.p-seller,.cus-num{
+  flex: 1;
+  padding: 0;
+  max-width: 400px;
+  padding-left: 5px;
+}
+.reciept-header{
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  font-weight: bold;
+
+}
+.reciept-header div{
+  margin-bottom: 2px;
+}
+.rt-1,.rt-5{
+  font-weight: bold;
+  font-size: 20px;
+  font-family: arial;
+}
+.rt-5{
+  font-size: 17px;
+  padding-left: 8px;
+}
+.rt-4,.rt-6,.r-seller{
+  display: flex;
+  align-content: center;
+}
+
+.reciept-body{
+  margin-top: 15px;
+  display: grid;
+  grid-template-rows: 22px 1fr;
+  background-color: black;
+  row-gap: 1px;
+  border: solid;
+  border-width: 1px;
+}
+.rb-header,.rb-body{
+  display: grid;
+  grid-template-columns: 290px 110px 90px 128px 128px;
+  text-align: center;
+  font-weight: bold;
+  background-color: black;
+  column-gap: 1px;
+}
+.rb-header div,.rb-body div{
+  background-color: white;
+}
+.rb-body{
+  min-height: 100px;
+}
+.total-holder{
+  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr 129px 130px;
+  text-align: center;
+
+}
+.total-holder p{
+  background-color: white;
+  font-weight: bold;
+}
+.t-text2{
+  text-align: start;
+}
+.t-text{
+  text-align: end;
+  padding-right: 5px;
+}
+.total-price{
+  border: solid;
+  border-width: 0px 1px 1px 1px;
+}
+.signature-section{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 5px;
+}
+
