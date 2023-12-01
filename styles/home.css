@@ -26,6 +26,9 @@ body{
   top: 0;
   right: 0;
 }
+#description{
+  width: 180px;
+}
 .add-cart-receipt{
   width: 150px;
   padding: 5px;
