@@ -67,7 +67,7 @@
       </div>
       <div>
         <label for="Quantity">Quantity:</label><br>
-        <input type="number" id="Quantity">
+        <input type="number" id="Quantity" min="0">
       </div>
       <div class="add-cart-receipt">
         <button class="add-to-cart-button">Add to cart</button>
@@ -82,7 +82,7 @@
       </div>
       <div class="amnt-div">
         <p>Amount:</p>
-        <p class="Amount:">0</p>
+        <p class="Amount">0</p>
       </div>
     </div>
     <div class="cus-name-holder">
@@ -106,7 +106,7 @@
           </div>
           <div class="rt-2">
             <p>Order on:</p>
-            <p></p>
+            <p class="current-date"></p>
           </div>
           <div class="rt-3">
             <P>Ndop Main-Market</P>
@@ -148,7 +148,7 @@
             </div> 
           </div>
           <div class="rb-body">
-            <div>
+            <div class="ov-1">
               <p>Ovaltine 400g</p>
             </div>
             <div>
@@ -195,15 +195,37 @@
             <div>
               <p>2500000F</p>
             </div> 
-            <div>
-              <p>Ovaltine 400g</p>
+
+            <div class="name-option">
+              <p>Ovaltine 2200g</p>
+              <div class="option-button" id="option-btn">
+                <button class="delete-button">delete</button>
+                <button class="return-button">cancel</button>
+              </div>
             </div>
-            <div>
-              <p>tin</p>
+
+            <div class="description2-holder">
+              <p class="description2-text">tin34</p>
+              <div class="description2-input dstn-holder" >
+                <select id="description2" >
+                  <option value="emty">emty</option>
+                  <option value="Carton">Carton</option>
+                  <option value="Palette">Palette</option>
+                  <option value="Bag">Bag</option>
+                  <option value="Parket">Parket</option>
+                  <option value="Tin">Tin</option>
+                  <option value="Liter">Liter</option>
+                  <option value="sachets">sachets</option>
+                </select>
+                <button class="d-cancel-button">OK</button>
+              </div>
             </div>
-            <div>
-              <p>10</p>
+
+            <div class="quantiy2-holder">
+              <p class="quantiy2-text" >10</p>
+                <input type="number" min="0" id="Quantity2" class="qnty2">
             </div>
+
             <div>
               <p>2500F</p>
             </div>

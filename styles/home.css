@@ -52,14 +52,14 @@ body{
   padding-left: 10px;
 }
 .add-to-cart-button{
-  background-color: blue;
+  background-color: green;
   margin-bottom: 4px;
   color: white;
   border: none;
   cursor: pointer;
 }
 .add-receipt-button{
-  background-color: rgb(240, 84, 27) ;
+  background-color: blue;
   color: white;
   border: solid;
   border-color: black;
@@ -117,14 +117,21 @@ body{
   max-width: 400px;
   padding-left: 5px;
 }
+.current-date{
+  padding-left: 3px;
+}
 .reciept-header{
   display: grid;
-  grid-template-columns: 350px 1fr;
+  grid-template-columns: 225px 1fr;
   font-weight: bold;
 
 }
 .reciept-header div{
   margin-bottom: 2px;
+}
+.ov-1 div:hover{
+  border: solid;
+  border-color: brown;
 }
 .rt-1,.rt-5{
   font-weight: bold;
@@ -135,7 +142,7 @@ body{
   font-size: 17px;
   padding-left: 8px;
 }
-.rt-4,.rt-6,.r-seller{
+.rt-4,.rt-6,.r-seller,.rt-2{
   display: flex;
   align-content: center;
 }
@@ -160,6 +167,7 @@ body{
 .rb-header div,.rb-body div{
   background-color: white;
 }
+
 .rb-body{
   min-height: 100px;
 }
@@ -190,4 +198,63 @@ body{
   grid-template-columns: 1fr 1fr;
   margin-top: 5px;
 }
+.name-option,.description2-holder,.quantiy2-holder  {
+  position: relative;
+  cursor: pointer;
+}
+
+.option-button{
+  border: solid;
+  border-width: 1px;
+  max-width: 110px;
+  padding: 5px;
+  position: absolute;
+  bottom: -33px;
+  left: 100px;
+  
+}
+
+#option-btn,.dstn-holder,#Quantity2{
+  display: none;
+  pointer-events: none;
+}
+#Quantity2,.qnty2{
+  position: absolute ;
+}
+.delete-button{
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.return-button,.d-cancel-button{
+  background-color: white;
+  border: solid;
+  border-width: 1px;
+  padding: 4px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.d-cancel-button{
+  height: 20px;
+  padding: 0px 3px;
+  margin-top: 2px;
+  z-index: 10;
+}
+#Qantity2,.qnty2{
+  max-width: 40px;
+  height: 15px;
+}
+.description2-input{
+  position: absolute;
+  border: solid;
+  border-width: 1px;
+  width: 80px;
+  padding: 2px;
+}
+
+
 
