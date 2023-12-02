@@ -256,5 +256,23 @@ body{
   padding: 2px;
 }
 
+.screen{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.abc{
+  text-align: start;
+  padding-left: 30px;
+}
+.abd{
+  text-align: start;
+  padding-left: 35px;
+}
+.una{
+  padding-left: 40px;
+}
+.unb{
+  padding-left: 45px;
+}
 
 
