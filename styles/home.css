@@ -122,7 +122,7 @@ body{
 }
 .reciept-header{
   display: grid;
-  grid-template-columns: 225px 1fr;
+  grid-template-columns: 220px 1fr;
   font-weight: bold;
 
 }
@@ -247,6 +247,7 @@ body{
 #Qantity2,.qnty2{
   max-width: 40px;
   height: 15px;
+  background-color: blue;
 }
 .description2-input{
   position: absolute;
