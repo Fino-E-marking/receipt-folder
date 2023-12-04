@@ -14,88 +14,90 @@
   </div>
   
   <div class="input-order">
-    <div class="input">
-      <div>
-        <label for="name">Item Name:</label>
-        <select id="name">
-          <option value="emty">emty</option>
-          <option value="Bavaria can beer">Bavaria can beer</option>
-          <option value="Amigo 5kg">Amigo 5kg</option>
-          <option value="Amigo 25kg">Amigo 25kg</option>
-          <option value="Amigo 50kg">Amigo 50kg</option>
-          <option value="Skoll beer">Skoll beer</option>
-          <option value="Bavarial bottle beer">Bavarial bottle beer</option>
-          <option value="Savon faco">Savon faco</option>
-          <option value="Mayor 5l">Mayor 5l</option>
-          <option value="Mayor 3L">Mayor 3L</option>
-          <option value="Mayor 1l">Mayor 1l</option>
-          <option value="0ilio 5l">0ilio 5l</option>
-          <option value="Oilio 1l">Oilio 1l</option>
-          <option value="Active 5l">Active 5l</option>
-          <option value="Wity chocolate 2.8l">Wity chocolate 2.8l</option>
-          <option value="Choco loco chocolate 2.8l">Choco loco chocolate 2.8l</option>
-          <option value="Bambi chocolate 2.8l">Bambi chocolate 2.8l</option>
-          <option value="Tartiana chocolate 2.8l">Tartiana chocolate 2.8l</option>
-          <option value="Valledor butter 2.7l">Valledor butter 2.7l</option>
-          <option value="La croix 5l">La croix 5l</option>
-          <option value="La croix 1l">La croix 1l</option>
-          <option value="Baron 5l">Baron 5l</option>
-          <option value="La croix  sachets">La croix  sachets</option>
-          <option value="Iron sponge red(12)">Iron sponge red(12)</option>
-          <option value="Iron sponge net(12)">Iron sponge net(12)</option>
-          <option value="Magic mamy sponge(24)">Magic mamy sponge(24)</option>
-          <option value="Savon mayor">Savon mayor</option>
-          <option value="Savon clean">Savon clean</option>
-          <option value="Savon uno">Savon uno</option>
-          <option value="Savon  anti crise">Savon  anti crise</option>
-          <option value="Savon pakeh">Savon pakeh</option>
-          
-        </select>
+    <div class="mx">
+      <div class="input">
+        <div>
+          <label for="name">Item Name:</label>
+          <select id="name">
+            <option value="emty">emty</option>
+            <option value="Bavaria can beer">Bavaria can beer</option>
+            <option value="Amigo 5kg">Amigo 5kg</option>
+            <option value="Amigo 25kg">Amigo 25kg</option>
+            <option value="Amigo 50kg">Amigo 50kg</option>
+            <option value="Skoll beer">Skoll beer</option>
+            <option value="Bavarial bottle beer">Bavarial bottle beer</option>
+            <option value="Savon faco">Savon faco</option>
+            <option value="Mayor 5l">Mayor 5l</option>
+            <option value="Mayor 3L">Mayor 3L</option>
+            <option value="Mayor 1l">Mayor 1l</option>
+            <option value="0ilio 5l">0ilio 5l</option>
+            <option value="Oilio 1l">Oilio 1l</option>
+            <option value="Active 5l">Active 5l</option>
+            <option value="Wity chocolate 2.8l">Wity chocolate 2.8l</option>
+            <option value="Choco loco chocolate 2.8l">Choco loco chocolate 2.8l</option>
+            <option value="Bambi chocolate 2.8l">Bambi chocolate 2.8l</option>
+            <option value="Tartiana chocolate 2.8l">Tartiana chocolate 2.8l</option>
+            <option value="Valledor butter 2.7l">Valledor butter 2.7l</option>
+            <option value="La croix 5l">La croix 5l</option>
+            <option value="La croix 1l">La croix 1l</option>
+            <option value="Baron 5l">Baron 5l</option>
+            <option value="La croix  sachets">La croix  sachets</option>
+            <option value="Iron sponge red(12)">Iron sponge red(12)</option>
+            <option value="Iron sponge net(12)">Iron sponge net(12)</option>
+            <option value="Magic mamy sponge(24)">Magic mamy sponge(24)</option>
+            <option value="Savon mayor">Savon mayor</option>
+            <option value="Savon clean">Savon clean</option>
+            <option value="Savon uno">Savon uno</option>
+            <option value="Savon  anti crise">Savon  anti crise</option>
+            <option value="Savon pakeh">Savon pakeh</option>
+            
+          </select>
+        </div>
+        <div>
+          <label for="Description">Description:</label><br>
+          <select id="description" >
+            <option value="emty">emty</option>
+            <option value="Carton">Carton</option>
+            <option value="Palette">Palette</option>
+            <option value="Bag">Bag</option>
+            <option value="Parket">Parket</option>
+            <option value="Tin">Tin</option>
+            <option value="Liter">Liter</option>
+            <option value="sachets">sachets</option>
+          </select>
+        </div>
+        <div>
+          <label for="Quantity">Quantity:</label><br>
+          <input type="number" id="Quantity" min="0" value="0">
+        </div>
+        <div class="add-cart-receipt">
+          <button class="add-to-cart-button">Add to cart</button>
+          <BUtton class="add-receipt-button">New Receipt</BUtton>
+          <button class="printe-reciept js-pinte-btn">Printe Receipt</button>
+        </div>
       </div>
-      <div>
-        <label for="Description">Description:</label><br>
-        <select id="description" >
-          <option value="emty">emty</option>
-          <option value="Carton">Carton</option>
-          <option value="Palette">Palette</option>
-          <option value="Bag">Bag</option>
-          <option value="Parket">Parket</option>
-          <option value="Tin">Tin</option>
-          <option value="Liter">Liter</option>
-          <option value="sachets">sachets</option>
-        </select>
+      <div class="prices">
+        <div class="prc-dic">
+          <p>Unit:</p>
+          <p class="unit-price">0</p>
+        </div>
+        <div class="amnt-div">
+          <p>Amount:</p>
+          <p class="Amount">0</p>
+        </div>
       </div>
-      <div>
-        <label for="Quantity">Quantity:</label><br>
-        <input type="number" id="Quantity" min="0" value="0">
+      <div class="cus-name-holder">
+        <label for="cus-name">Customer Name:</label><br>
+        <input type="text" id="cus-name">
       </div>
-      <div class="add-cart-receipt">
-        <button class="add-to-cart-button">Add to cart</button>
-        <BUtton class="add-receipt-button">New Receipt</BUtton>
-        <button class="printe-reciept">Printe Receipt</button>
+      <div class="cus-name-holder">
+        <label for="cus-tel">Customer Tel:</label><br>
+        <input type="TEL" id="cus-tel" class="mc" >
       </div>
-    </div>
-    <div class="prices">
-      <div class="prc-dic">
-        <p>Unit:</p>
-        <p class="unit-price">0</p>
+      <div class="seller-name-holder">
+        <label for="serler-name">Seller Name:</label><br>
+        <input type="TEL" id="serler-name" class="mc" >
       </div>
-      <div class="amnt-div">
-        <p>Amount:</p>
-        <p class="Amount">0</p>
-      </div>
-    </div>
-    <div class="cus-name-holder">
-      <label for="cus-name">Customer Name:</label><br>
-      <input type="text" id="cus-name">
-    </div>
-    <div class="cus-name-holder">
-      <label for="cus-tel">Customer Tel:</label><br>
-      <input type="TEL" id="cus-tel" class="mc" >
-    </div>
-    <div class="seller-name-holder">
-      <label for="serler-name">Seller Name:</label><br>
-      <input type="TEL" id="serler-name" class="mc" >
     </div>
 
     <div class="reciept-holder">
@@ -164,8 +166,9 @@
               <p>2500000F</p>
             </div> 
 
-            <div>
-              <p>Ovaltine 400g</p>
+            <div class="test-name-holder">
+              <p>Ovaltine 1200g</p>
+              <button class="test-delete-button" id="test1">delete</button>
             </div>
             <div>
               <p>tin</p>
@@ -259,8 +262,6 @@
           <div class="signature-section">
             <p>Manager Signature: ...............................</p>
             <p>Customer Signature: ................................</p>
-          </div>
-
           </div>
         </div>
       </div>
