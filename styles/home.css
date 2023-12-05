@@ -110,7 +110,7 @@ body{
   max-width: 800px;
   min-width: 750px;
   display: grid;
-  grid-template-rows: 100px 1fr 20px;
+  grid-template-rows: 100px 1fr 20px 1fr ;
 }
 .R-cus-name,.p-seller,.cus-num{
   flex: 1;
@@ -159,7 +159,7 @@ body{
 }
 .rb-header,.rb-body{
   display: grid;
-  grid-template-columns: 290px 110px 90px 128px 128px;
+  grid-template-columns: 290px 110px 90px 128px 128px 1fr;
   text-align: center;
   font-weight: bold;
   background-color: black;
@@ -263,11 +263,13 @@ body{
 }
 .abc{
   text-align: start;
-  padding-left: 30px;
+  padding-left: 60px;
+  padding-bottom: 2px;
 }
 .abd{
   text-align: start;
   padding-left: 35px;
+  padding-bottom: 2px;
 }
 .una{
   padding-left: 40px;
@@ -277,48 +279,55 @@ body{
 }
 
 
-
-
-.test-name-holder{
-  position: relative;
-  background-color: gray;
-  margin-top: 1px;
-  margin-bottom: 1px;
-}
-.test-delete-button{
-  padding: 2px 15px;
-  cursor: pointer;
-  position: absolute;
-  bottom: 0px;
-  right: 0;
-}
-.test-delete-button:active{
-  background-color: brown;
-  color: white;
-}
-#test1{
-  display: none;
-}
-
 @media print {
-  .reciept-body{
-    border: solid;
-    border-width: 2px;
-  }
-  .rb-header{
-    border: solid;
-    border-width: 1px 0px 1px 0px;
-  }
-  .rb-header div{
-    border: solid;
-    border-width: 0px 1px 1px 0px;
+  body{
+    padding-top: 0;
   }
   .mx{
     display: none;
   }
-  .abc,.unb{
+  .reciept-body{
+    border: solid;
+    border-width: 2px;
+  }
+  .rb-header div{
     border: solid;
     border-width: 0px 1px 0px 0px;
+    margin-bottom: 0;
   }
-  
+  .rb-header{
+    border: solid;
+    border-width: 0px 0px 1px 0px; 
+  }
+  .abc,.abd{
+    border: solid;
+    border-width: 0px 1px 0px 0px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .una{
+    border-width: 0px;
+  }
+  .rb-header,.rb-body{
+    grid-template-columns: 290px 110px 90px 128px 128px;
+  }
+  .dt-a,.title-holder{
+    display: none;
+  }
+}
+
+.delete-action{
+  background-color: red;
+  color: white;
+  padding: 2px 5px;
+  border: none;
+}
+hr{
+  border: solid;
+  border-width: 1px 0px 0px 0px;
+}
+
+.Newr-js{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }

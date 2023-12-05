@@ -8,7 +8,7 @@ let deleteButton = document.querySelector('.name-option');
 let description2Button = document.querySelector('.description2-holder');
 let Quantity2Button = document.querySelector('.quantiy2-holder');
 let quantity2 = document.getElementById('Quantity2');
-let d2Cancel = document.querySelector('.d-cancel-button');
+let newreceiptbook = document.querySelector('.add-receipt-button');
 let description2 = document.getElementById('description2');
 
 description.addEventListener('input', fun1);
@@ -16,12 +16,12 @@ quantity.addEventListener('input', fun2);
 addButton.addEventListener('click', fun3);
 deleteButton.addEventListener('click', fun4);
 description2Button.addEventListener('click', fun5);
-d2Cancel.addEventListener('click', fun6);
 description2.addEventListener('input', fun7);
 Quantity2Button.addEventListener('click', fun8)
 quantity2.addEventListener('input', fun9);
 quantity2.addEventListener('mouseleave', fun10);
 addButton.addEventListener('click', fun11);
+newreceiptbook.addEventListener('click', fun14);
 console.log(document.querySelector('.Amount').innerHTML);
 
 function fun2() {
@@ -129,8 +129,8 @@ const receiptholder = []
 groupingitmem();
 function groupingitmem() {
   let htmlholder = '';
-  receiptholder.forEach((recieptitems, index) => {
-    const itemsObject = receiptholder[index];
+  for (let i = 0; i < receiptholder.length; i++) {
+    const itemsObject = receiptholder[i];
     const { itemname, itemdescription, itemquantity, itemunit, itemamount } = itemsObject;
     const htmlF = `
       <div class="name-option abc">
@@ -166,58 +166,247 @@ function groupingitmem() {
       <div class="abd una">
         ${itemamount}
       </div>
+      <div class="dt-a">
+        <button onclick="
+          receiptholder.splice(${i}, 1)
+          groupingitmem();
+          fun12();
+        "class="delete-action">delete</button>
+      </div>
     `;
     htmlholder += htmlF;
     document.querySelector('.rb-body').innerHTML = htmlholder;
 
-    document.querySelectorAll('.name-option')
-      .forEach((optionholder, index) => {
-        optionholder
-        .addEventListener('click',() => {
-          fun4();
-        })
-      })
-
-    document.querySelectorAll('.quantiy2-holder')
-      .forEach((quantiy2holderA, index) => {
-        quantiy2holderA
-        .addEventListener('click',() => {
-          fun8();
-        })
-    })
-    document.querySelectorAll('.Quantity2')
-      .forEach((Quantity2B, index) => {
-        Quantity2B
-        .addEventListener('input',() => {
-          fun9();
-        })
-      })
-    document.querySelectorAll('.Quantity2')
-      .forEach((Quantity2B, index) => {
-        Quantity2B
-        .addEventListener('mouseleave',() => {
-          fun10();
-        })
-      })
-
-  })
+  }
 }
 
+fun12();
+function fun12() {
+  let totalpovider = 0;
+  for (let i = 0; i < receiptholder.length; i++) {
+    const totalObject = receiptholder[i];
+    const { itemamount } = totalObject;
+    totalpovider += Number(itemamount);
+    document.getElementById('sub-total').innerHTML = `${totalpovider} Frs`;
+  }
+}
+
+const nextreceipt = [];
+fun13();
+function fun13() {
+  let nextreceipthtml = '';
+  for (let i = 0; i < nextreceipt.length; i++) {
+    const nextreceiptelement = nextreceipt[i];
+    const nextRhtml = `
+      <div class="reciept-book">
+        <div class="reciept-header">
+          <div class="rt-1">
+            <p>E PROVISION</p>
+          </div>
+          <div class="rt-2">
+            <p>Order on:</p>
+            <p class="current-date"></p>
+          </div>
+          <div class="rt-3">
+            <P>Ndop Main-Market</P>
+            <p>shed 64</p>
+          </div>
+          <div class="rt-4">
+            <p>Customer Name:</p>
+            <p class="R-cus-name">zxcvhjjhgfdxcvbnhvgcf</p>
+          </div>
+          <div class="rt-5">
+            <p>Tel: 683404522</p>
+          </div>
+          <div class="rt-6">
+            <p>Customer Tel:</p>
+            <p class="cus-num">76542123456</p>
+          </div>
+          <div class="r-seller">
+            <p>Seller:</p>
+            <p class="p-seller">Iliasu</p>
+          </div>
+        </div>
+        <div class="reciept-body">
+          <div class="rb-header">
+            <div>
+              <p>Item Name</p>
+            </div>
+            <div>
+              <p>Description</p>
+            </div>
+            <div>
+              <p>Quantity</p>
+            </div>
+            <div>
+              <p>Unit</p>
+            </div>
+            <div>
+              <p>Amount</p>
+            </div>
+            <div>
+              <p>option</p>
+            </div> 
+          </div>
+          <div class="rb-body">
+          <div>
+              <p>Ovaltine 400g</p>
+            </div>
+            <div>
+              <p>tin</p>
+            </div>
+            <div>
+              <p>10</p>
+            </div>
+            <div>
+              <p>2500F</p>
+            </div>
+            <div>
+              <p>2500000F</p>
+            </div> 
+            <div class="dt-a">
+              <button class="delete-action">delete</button>
+            </div>
+          </div>
+        </div>
+        <div class="total-holder">
+          <p class="t-text2">Thanks for shoping at E Provision</p>
+          <p class="t-text">Total</p>
+          <p class="total-price" id="sub-total">20000F</p>
+        </div>
+        <div>
+          <p>No refund of money if good is taken in good condition.</p>
+          <div class="signature-section">
+            <p>Manager Signature: ...............................</p>
+            <p>Customer Signature: ................................</p>
+          </div>
+        </div>
+      </div>
+    `;
+    nextreceipthtml += nextRhtml;
+    document.querySelector('.Newr-js').innerHTML = nextreceipthtml;
+    console.log(document.querySelector('.Newr-js').innerHTML);
+  }
+}
+function fun14() {
+  const nextRhtml2 = `
+      <div class="reciept-book">
+        <div class="reciept-header">
+          <div class="rt-1">
+            <p>E PROVISION</p>
+          </div>
+          <div class="rt-2">
+            <p>Order on:</p>
+            <p class="current-date"></p>
+          </div>
+          <div class="rt-3">
+            <P>Ndop Main-Market</P>
+            <p>shed 64</p>
+          </div>
+          <div class="rt-4">
+            <p>Customer Name:</p>
+            <p class="R-cus-name">zxcvhjjhgfdxcvbnhvgcf</p>
+          </div>
+          <div class="rt-5">
+            <p>Tel: 683404522</p>
+          </div>
+          <div class="rt-6">
+            <p>Customer Tel:</p>
+            <p class="cus-num">76542123456</p>
+          </div>
+          <div class="r-seller">
+            <p>Seller:</p>
+            <p class="p-seller">Iliasu</p>
+          </div>
+        </div>
+        <div class="reciept-body">
+          <div class="rb-header">
+            <div>
+              <p>Item Name</p>
+            </div>
+            <div>
+              <p>Description</p>
+            </div>
+            <div>
+              <p>Quantity</p>
+            </div>
+            <div>
+              <p>Unit</p>
+            </div>
+            <div>
+              <p>Amount</p>
+            </div>
+            <div>
+              <p>option</p>
+            </div> 
+          </div>
+          <div class="rb-body">
+          <div>
+              <p>Ovaltine 400g</p>
+            </div>
+            <div>
+              <p>tin</p>
+            </div>
+            <div>
+              <p>10</p>
+            </div>
+            <div>
+              <p>2500F</p>
+            </div>
+            <div>
+              <p>2500000F</p>
+            </div> 
+            <div class="dt-a">
+              <button class="delete-action">delete</button>
+            </div>
+          </div>
+        </div>
+        <div class="total-holder">
+          <p class="t-text2">Thanks for shoping at E Provision</p>
+          <p class="t-text">Total</p>
+          <p class="total-price" id="sub-total">20000F</p>
+        </div>
+        <div>
+          <p>No refund of money if good is taken in good condition.</p>
+          <div class="signature-section">
+            <p>Manager Signature: ...............................</p>
+            <p>Customer Signature: ................................</p>
+          </div>
+        </div>
+      </div>
+    `;
+  nextreceipt.push('');
+  fun13();
+}
+
+
 function fun11() {
+  const Sellername = document.querySelector('.p-seller');
   const itemname = names.value;
   const itemdescription = description.value;
   const itemquantity = quantity.value;
   const itemunit = unit.innerHTML;
   const itemamount = amount.innerHTML;
   
-  receiptholder.push({
-    itemname,
-    itemdescription,
-    itemquantity,
-    itemunit,
-    itemamount
-  })
+  if (Sellername.innerText === 'Eugene') {
+    nextreceipt.push({
+      itemname,
+      itemdescription,
+      itemquantity,
+      itemunit,
+      itemamount
+    })
+  }else{
+    receiptholder.push({
+      itemname,
+      itemdescription,
+      itemquantity,
+      itemunit,
+      itemamount
+    })
+  }
   groupingitmem();
+  fun12();
   names.value = 'emty';
   description.value = 'emty';
   quantity.value =  0;
@@ -225,3 +414,6 @@ function fun11() {
   document.querySelector('.Amount').innerHTML = (quantity.value)*(unit.innerHTML);
   console.log(receiptholder);
 }
+
+
+
