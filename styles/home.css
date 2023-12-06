@@ -111,6 +111,7 @@ body{
   min-width: 750px;
   display: grid;
   grid-template-rows: 100px 1fr 20px 1fr ;
+  min-height: 400px;
 }
 .R-cus-name,.p-seller,.cus-num{
   flex: 1;
@@ -330,4 +331,5 @@ hr{
 .Newr-js{
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  min-height: 300px;
 }
