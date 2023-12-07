@@ -22,7 +22,6 @@ quantity2.addEventListener('input', fun9);
 quantity2.addEventListener('mouseleave', fun10);
 addButton.addEventListener('click', fun11);
 newreceiptbook.addEventListener('click', fun14);
-console.log(document.querySelector('.Amount').innerHTML);
 
 function fun2() {
   document.querySelector('.Amount').innerHTML = (quantity.value)*(unit.innerHTML); 
@@ -98,7 +97,6 @@ function fun4() {
   console.log(optionButtons.classList);
 }
 let d2Horder = document.querySelector('.dstn-holder');
-console.log(d2Horder.classList);
 function fun5() {
       d2Horder.classList.remove('dstn-holder');
     console.log(d2Horder.classList);
@@ -330,11 +328,7 @@ function fun13() {
               <p>2500000F</p>
             </div> 
             <div class="dt-a">
-              <button class="delete-action" onclick="
-              receiptholder2.splice(${i}, 1)
-              groupingitmem();
-              fun12();
-            ">delete</button>
+              <button class="delete-action">delete</button>
             </div>
           </div>
         </div>
@@ -357,6 +351,26 @@ function fun13() {
     
   }
 }
+fun15();
+function fun15() {
+  nextreceipt.forEach((recieptelements, index) => {
+    if (index === 0) {
+      console.log('hello2');
+      const serlername = document.getElementById('serler-name');
+      if (serlername.value === 'Eugene') {
+        receiptholder2.forEach((signal, index) => {
+          Objectfile = receiptholder2[index];
+          const {itemamount} = Objectfile
+          console.log(itemamount);
+          document.querySelector('.C400').innerHTML = index;
+        });
+      };
+      
+    }
+  })
+  console.log('hello');
+  
+};
 function fun14() {
   /*const nextRhtml2 = `
       <div class="reciept-book">
@@ -473,6 +487,7 @@ function fun11() {
     })
     groupingitmem();
     fun12();
+    fun15();
   }else if (serlername3.value === 'Eugene') {
     receiptholder2.push({
       itemname,
@@ -489,7 +504,6 @@ function fun11() {
   quantity.value =  0;
   unit.innerHTML = 0;
   document.querySelector('.Amount').innerHTML = (quantity.value)*(unit.innerHTML);
-  console.log(receiptholder2);
 }
 
 
