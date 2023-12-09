@@ -105,13 +105,15 @@ body{
   padding: 10px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .reciept-book{
   max-width: 800px;
   min-width: 750px;
   display: grid;
-  grid-template-rows: 100px 1fr 20px 1fr ;
-  min-height: 400px;
+  grid-template-rows: 100px 1fr 20px;
+  min-height: 200px;
 }
 .R-cus-name,.p-seller,.cus-num{
   flex: 1;
@@ -331,5 +333,15 @@ hr{
 .Newr-js{
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  min-height: 300px;
+  min-height: 400px;
+  margin-top: 40px;
+  row-gap: 40px;
+  max-width: 2100px;
+}
+.Newr-js .reciept-book{
+  max-height: 370px;
+  min-height: 200px;
+}
+.rpt-second-contain{
+  min-height: 500px;
 }

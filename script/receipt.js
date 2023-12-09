@@ -254,7 +254,7 @@ function fun12() {
   }
   
 }
-nextreceipt = [];
+const nextreceipt = [];
 fun13();
 function fun13() {
   let nextreceipthtml = '';
@@ -348,32 +348,14 @@ function fun13() {
     `;
     nextreceipthtml += nextRhtml;
     document.querySelector('.Newr-js').innerHTML = nextreceipthtml;
-    
+    console.log(nextreceipt.length);
+    document.querySelector('.C400').innerHTML = nextreceipt.length
   }
 }
-fun15();
-function fun15() {
-  nextreceipt.forEach((recieptelements, index) => {
-    if (index === 0) {
-      console.log('hello2');
-      const serlername = document.getElementById('serler-name');
-      if (serlername.value === 'Eugene') {
-        receiptholder2.forEach((signal, index) => {
-          Objectfile = receiptholder2[index];
-          const {itemamount} = Objectfile
-          console.log(itemamount);
-          document.querySelector('.C400').innerHTML = index;
-        });
-      };
-      
-    }
-  })
-  console.log('hello');
-  
-};
+
 function fun14() {
-  /*const nextRhtml2 = `
-      <div class="reciept-book">
+  const nextRhtml2 = `
+      <div class="reciept-book n2">
         <div class="reciept-header">
           <div class="rt-1">
             <p>E PROVISION</p>
@@ -457,13 +439,12 @@ function fun14() {
           </div>
         </div>
       </div>
-    `;*/
-    nextreceipt.push('');
-      fun13();
-    if (serlername.value === 'Eugene') {
+    `;
+    let m3 = nextRhtml2;
+    nextreceipt.push(m3);
+    fun13();
       groupingitmem();
       fun12();
-    }
   
 }
 
@@ -496,6 +477,14 @@ function fun11() {
       itemunit,
       itemamount
     })
+    console.log(receiptholder2.length);
+    for (let i = 0; i < receiptholder2.length; i++) {
+      const element1 = receiptholder2[i];
+      if (receiptholder2.length === 10) {
+        continue;
+      }
+    }
+    
     groupingitmem();
     fun12();
   }
