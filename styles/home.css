@@ -293,15 +293,15 @@ body{
     border: solid;
     border-width: 2px;
   }
-  .rb-header div{
+  .rb-header div,#m2{
     border: solid;
     border-width: 0px 1px 0px 0px;
     margin-bottom: 0;
   }
-  .rb-header{
+  /*.rb-header{
     border: solid;
     border-width: 0px 0px 1px 0px; 
-  }
+  }*/
   .abc,.abd{
     border: solid;
     border-width: 0px 1px 0px 0px;
@@ -313,6 +313,8 @@ body{
   }
   .rb-header,.rb-body{
     grid-template-columns: 290px 110px 90px 128px 128px;
+    column-gap: 0;
+    row-gap: 0;
   }
   .dt-a,.title-holder{
     display: none;
@@ -344,4 +346,8 @@ hr{
 }
 .rpt-second-contain{
   min-height: 500px;
+}
+
+#man{
+  background-color: blue;
 }
