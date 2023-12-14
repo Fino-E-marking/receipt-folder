@@ -114,6 +114,7 @@ body{
   display: grid;
   grid-template-rows: 100px 1fr 20px;
   min-height: 200px;
+  margin-bottom: 40px;
 }
 .R-cus-name,.p-seller,.cus-num{
   flex: 1;
@@ -332,7 +333,7 @@ hr{
   border-width: 1px 0px 0px 0px;
 }
 
-.Newr-js{
+/*.Newr-js{
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   min-height: 400px;
@@ -340,19 +341,44 @@ hr{
   row-gap: 40px;
   max-width: 2100px;
 }
-.Newr-js .reciept-book{
+/*.Newr-js .reciept-book{
   max-height: 370px;
   min-height: 200px;
 }
 .rpt-second-contain{
-  min-height: 500px;
+  
+  background-color: blue;
 }
 
 #man{
   background-color: blue;
 }
 
-/* switch for new receipts*/ 
+/* switch for new receipts 
 #reciept-bd-00001,#reciept-bd-00012{
   display: none;
+}*/
+
+
+.r-notist{
+ background-color: black;
+ font-weight: bold;
+ display: grid;
+ width: 410px;
+ grid-template-columns: 150px 50px 50px 50px 50px 50px;
+ border: solid;
+ border-width: 1px;
+ column-gap: 2px;
+ row-gap: 2px;
+ position: absolute;
+ top: 210px;
+ right: 5%;
+
+}
+.r-notis-header{
+ background-color: black;
+}
+.r-notist div{
+  background-color: white;
+  padding-left: 5px;
 }

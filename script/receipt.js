@@ -5,21 +5,12 @@ let unit = document.querySelector('.unit-price');
 let amount = document.querySelector('.Amount');
 let addButton = document.querySelector('.add-to-cart-button');
 let deleteButton = document.querySelector('.name-option');
-let description2Button = document.querySelector('.description2-holder');
-let Quantity2Button = document.querySelector('.quantiy2-holder');
-let quantity2 = document.getElementById('Quantity2');
 let newreceiptbook = document.querySelector('.add-receipt-button');
-let description2 = document.getElementById('description2');
 
 description.addEventListener('input', fun1);
 quantity.addEventListener('input', fun2);
 addButton.addEventListener('click', fun3);
 deleteButton.addEventListener('click', fun4);
-description2Button.addEventListener('click', fun5);
-description2.addEventListener('input', fun7);
-Quantity2Button.addEventListener('click', fun8)
-quantity2.addEventListener('input', fun9);
-quantity2.addEventListener('mouseleave', fun10);
 addButton.addEventListener('click', fun11);
 newreceiptbook.addEventListener('click', fun14);
 
@@ -106,21 +97,6 @@ function fun6() {
   setTimeout(function() {
     d2Horder.classList.add('dstn-holder');
   }, 200)
-}
-function fun7() {
-  document.querySelector('.description2-text').innerHTML = description2.value;
-}
-
-function fun8() {
-  quantity2.id = '';
-}
-function fun9() {
-  document.querySelector('.quantiy2-text').innerHTML = quantity2.value;
-  console.log('hello3');
-}
-function fun10() {
-  quantity2.id = 'Quantity2';
-  console.log('hello');
 }
 
 let receiptholderb = JSON.parse(localStorage.getItem('storenrpt'));
@@ -490,7 +466,7 @@ function fun12() {
 }
 
 
-
+/*
 const nextreceipt = [];
 fun13();
 function fun13() {
@@ -717,7 +693,7 @@ function fun14() {
       fun12();
       fun15storage();
   
-}
+} */
 
 
 function fun11() {
