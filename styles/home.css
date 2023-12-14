@@ -351,3 +351,8 @@ hr{
 #man{
   background-color: blue;
 }
+
+/* switch for new receipts*/ 
+#reciept-bd-00001,#reciept-bd-00012{
+  display: none;
+}
