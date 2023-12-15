@@ -6,54 +6,113 @@ let amount = document.querySelector('.Amount');
 let addButton = document.querySelector('.add-to-cart-button');
 let deleteButton = document.querySelector('.name-option');
 let newreceiptbook = document.querySelector('.add-receipt-button');
-
+names.addEventListener('input', fun1)
 description.addEventListener('input', fun1);
 quantity.addEventListener('input', fun2);
 addButton.addEventListener('click', fun3);
 deleteButton.addEventListener('click', fun4);
 addButton.addEventListener('click', fun11);
-newreceiptbook.addEventListener('click', fun14);
+//newreceiptbook.addEventListener('click', fun14);
 
 function fun2() {
   document.querySelector('.Amount').innerHTML = (quantity.value)*(unit.innerHTML); 
 }
 function fun1() {
   document.querySelector('.Amount').innerHTML = (quantity.value)*(unit.innerHTML);
-  switch (description.value === 'Piece') {
-    case (names.value === `Mayor 5l`):
-      unit.innerHTML = 8000;
+  if (description.value === 'emty') {
+    unit.innerHTML = 0;
+  }else if (names.value === `emty`) {
+    unit.innerHTML = 0;
+  }else if (description.value === 'Piece') {
+    switch (description.value === 'Piece') {
+      case (names.value === `Mayor 5l`):
+        unit.innerHTML = 8000;
+        break;
+      case (names.value === `Mayor 3l`):
+        unit.innerHTML = 5000;
+        break;
+      case (names.value === `Mayor 1l`):
+        unit.innerHTML = 1600;
+        break;
+      case (names.value === `Oilio 1l`):
+        unit.innerHTML = 1900;
+        break;
+      case (names.value === `Oilio 5l`):
+        unit.innerHTML = 9500;
+        break;
+      case (names.value === `Active 5l`):
+        unit.innerHTML = 8500;
+        break;
+      case (names.value === `Wity chocolate 2.8l`):
+        unit.innerHTML = 5500;
+        break;
+      case (names.value === `Choco loco chocolate 2.8l`):
+        unit.innerHTML = 5500;
+        break;
+      case (names.value === `Bambi chocolate 2.8l`):
+        unit.innerHTML = 5500;
+        break;
+      case (names.value === `Tartiana chocolate 2.8l`):
+        unit.innerHTML = 6000;
+        break;
+      case (names.value === `OLA omo 1kg`):
+        unit.innerHTML = 1500;
+        break;
+      case (names.value === `OLA omo halfkg`):
+        unit.innerHTML = 750;
+        break;
+      case (names.value === `Mada omo 1kg`):
+        unit.innerHTML = 1500;
+        break;
+      case (names.value === `Mada omo halfkg`):
+        unit.innerHTML = 800;
+        break;
+      case (names.value === `Ariel omo 1kg`):
+        unit.innerHTML = 2000;
+        break;
+  
+      default: unit.innerHTML = 0;
+        break;
+    } 
+  }else if (description.value === 'Bag') {
+    switch (description.value === 'Bag') {
+      case (names.value === `Amigo 5kg`):
+        unit.innerHTML = 2500;
+        break;
+      case (names.value === `Amigo 25kg`):
+        unit.innerHTML = 12000;
+        break;
+      case (names.value === `Amigo 50kg`):
+        unit.innerHTML = 24000;
+        break;
+      case (names.value === `Champion rice 25kg`):
+        unit.innerHTML = 13500;
+        break;
+      case (names.value === `Champion rice 50kg`):
+        unit.innerHTML = 26000;
+        break;
+      case (names.value === `Habiba 25kg`):
+        unit.innerHTML = 13000;
+        break;
+      case (names.value === `Selecter 25kg`):
+        unit.innerHTML = 13000;
+        break;
+      case (names.value === `OLA omo 1kg`):
+      unit.innerHTML = 12000;
       break;
-    case (names.value === `Mayor 3l`):
-      unit.innerHTML = 5000;
-      break;
-    case (names.value === `Mayor 1l`):
-      unit.innerHTML = 1600;
-      break;
-    case (names.value === `Oilio 1l`):
-      unit.innerHTML = 1900;
-      break;
-    case (names.value === `0ilio 5l`):
-      unit.innerHTML = 9500;
-      break;
-    case (names.value === `Active 5l`):
-      unit.innerHTML = 8500;
-      break;
-    case (names.value === `Wity chocolate 2.8l`):
-      unit.innerHTML = 5500;
-      break;
-    case (names.value === `Choco loco chocolate 2.8l`):
-      unit.innerHTML = 5500;
-      break;
-    case (names.value === `Bambi chocolate 2.8l`):
-      unit.innerHTML = 5500;
-      break;
-    case (names.value === `Tartiana chocolate 2.8l`):
-      unit.innerHTML = 6000;
-      break;
-
-
-    default:
-      break;
+      case (names.value === `OLA omo halfkg`):
+        unit.innerHTML = 12000;
+        break;
+      case (names.value === `Mada omo 1kg`):
+        unit.innerHTML = 13000;
+        break;
+      case (names.value === `Mada omo halfkg`):
+        unit.innerHTML = 13000;
+        break;
+      
+      default:unit.innerHTML = 0;
+        break;
+    }
   }
 }
 
@@ -589,7 +648,7 @@ function fun13() {
         display.innerHTML = 'div-5';
        ordercontain[5].id = '0000011115' 
       }
-      */
+      
       
 
     });

@@ -287,7 +287,10 @@ body{
   body{
     padding-top: 0;
   }
-  .mx{
+  .mx,.rt-n{
+    display: none;
+  }
+  .rt-n,#rr2{
     display: none;
   }
   .reciept-body{
@@ -317,7 +320,7 @@ body{
     column-gap: 0;
     row-gap: 0;
   }
-  .dt-a,.title-holder{
+  .dt-a,.title-holder,.rt-n{
     display: none;
   }
 }
