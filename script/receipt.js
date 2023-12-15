@@ -70,6 +70,21 @@ function fun1() {
       case (names.value === `Ariel omo 1kg`):
         unit.innerHTML = 2000;
         break;
+      case (names.value === `Valledor butter 2.7l`):
+        unit.innerHTML = 4500;
+        break;
+      case (names.value === `La croix 5l`):
+        unit.innerHTML = 4500;
+        break;
+      case (names.value === `La croix 1l`):
+        unit.innerHTML = 1000;
+        break;
+      case (names.value === `Baron 5l`):
+        unit.innerHTML = 5000;
+        break;
+        case (names.value === `super morl 10l`):
+        unit.innerHTML = 1500;
+        break;
   
       default: unit.innerHTML = 0;
         break;
@@ -111,6 +126,103 @@ function fun1() {
         break;
       
       default:unit.innerHTML = 0;
+        break;
+    }
+  }else if (description.value === 'Carton') {
+    switch (description.value === 'Carton') {
+
+      case (names.value === `Savon mayor`):
+        unit.innerHTML = 20000;
+        break;
+      case (names.value === `Savon clean`):
+        unit.innerHTML = 21000;
+        break;
+      case (names.value === `Savon uno`):
+        unit.innerHTML = 18500;
+        break;
+      case (names.value === `Savon  anti crise`):
+        unit.innerHTML = 15000;
+        break;
+      case (names.value === `Savon pakeh`):
+        unit.innerHTML = 17500;
+        break;
+      case (names.value === `Savon faco`):
+        unit.innerHTML = 17500;
+        break;
+
+      default:unit.innerHTML = 0;
+        break;
+    }
+  }else if (description.value === 'Parket') {
+    switch (description.value === 'Parket') {
+      case (names.value === `La croix  sachets`):
+        unit.innerHTML = 1200;
+        break;
+      case (names.value === `Trophe can(big)`):
+        unit.innerHTML = 9500;
+        break;
+      case (names.value === `Trophe can(small)`):
+        unit.innerHTML = 7000;
+        break;
+      case (names.value === `Hiro (big)`):
+        unit.innerHTML = 9500;
+        break;
+      case (names.value === `Hiro (small)`):
+        unit.innerHTML = 7000;
+        break;
+      case (names.value === `Barvaria bottle`):
+        unit.innerHTML = 16500;
+        break;
+      case (names.value === `Barvaria can(big)`):
+        unit.innerHTML = 17000;
+        break;
+      case (names.value === `Trophe can(small)`):
+        unit.innerHTML = 7000;
+        break;
+      case (names.value === `Hiro (big)`):
+        unit.innerHTML = 9500;
+        break;
+      case (names.value === `Hiro (small)`):
+        unit.innerHTML = 7000;
+        break;
+      case (names.value === `Barvaria bottle`):
+        unit.innerHTML = 16500;
+        break;
+      case (names.value === `Malter guiness`):
+        unit.innerHTML = 7500;
+        break;
+      case (names.value === `Power malt`):
+        unit.innerHTML = 14000;
+        break;
+      case (names.value === `Vapur`):
+        unit.innerHTML = 14500;
+        break;
+      case (names.value === `Bullet can`):
+        unit.innerHTML = 14000;
+        break;
+      case (names.value === `Bullet sachet`):
+        unit.innerHTML = 1700;
+        break;
+        case (names.value === `Henieken (1stclass)`):
+        unit.innerHTML = 19000;
+        break;
+      case (names.value === `Henieken (2ndclass)`):
+        unit.innerHTML = 17500;
+        break;
+      case (names.value === `Booter`):
+        unit.innerHTML = 18000;
+        break;
+      case (names.value === `3X energy drink`):
+        unit.innerHTML = 15000;
+        break;
+      case (names.value === `super morl 1l`):
+        unit.innerHTML = 1500;
+        break;
+        case (names.value === `Skoll`):
+        unit.innerHTML = 21000;
+        break;
+    
+      default: unit.innerHTML = 0;
         break;
     }
   }
