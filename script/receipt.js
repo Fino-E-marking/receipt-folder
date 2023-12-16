@@ -8,6 +8,8 @@ let deleteButton = document.querySelector('.name-option');
 let newreceiptbook = document.querySelector('.add-receipt-button');
 names.addEventListener('input', fun1)
 description.addEventListener('input', fun1);
+names.addEventListener('input', fun2)
+description.addEventListener('input', fun2);
 quantity.addEventListener('input', fun2);
 addButton.addEventListener('click', fun3);
 deleteButton.addEventListener('click', fun4);
@@ -28,7 +30,7 @@ function fun1() {
       case (names.value === `Mayor 5l`):
         unit.innerHTML = 8000;
         break;
-      case (names.value === `Mayor 3l`):
+      case (names.value === `Mayor 3L`):
         unit.innerHTML = 5000;
         break;
       case (names.value === `Mayor 1l`):
@@ -289,9 +291,15 @@ const receiptholder5 = [];
 groupingitmem();
 function groupingitmem() {
   const serlername = document.getElementById('serler-name');
-  if (serlername.value === 'Iliasu') {
+  const R1 = document.querySelector('.R1');
+  const R2 = document.querySelector('.R2');
+  if (R1.innerHTML === 'true') {
+    R1.innerHTML = 5;
+  }
+  if (R1.innerHTML < 5) {
     let htmlholder1 = '';
     for (let i = 0; i < receiptholder.length; i++) {
+      document.querySelector('.R1').innerHTML = Number(i) + 1 
       const itemsObject = receiptholder[i];
       const { itemname, itemdescription, itemquantity, itemunit, itemamount } = itemsObject;
       const htmlF = `
@@ -339,12 +347,11 @@ function groupingitmem() {
       htmlholder1 += htmlF;
         document.querySelector('.rb-body').innerHTML = htmlholder1;  
     }
-  }else if (serlername.value === 'Eugene') {
+  }else if (R1.innerHTML === '5' && R2.innerHTML < 5) {
     let display = document.querySelector('.A400');
-
-    if (display.className === `A400 div-1`) {
       let htmlholder1 = '';
       for (let i = 0; i < receiptholder1.length; i++) {
+        document.querySelector('.R2').innerHTML = receiptholder1.length
         const itemsObject1 = receiptholder1[i];
         const { itemname, itemdescription, itemquantity, itemunit, itemamount } = itemsObject1;
         const htmlF1 = `
@@ -390,10 +397,9 @@ function groupingitmem() {
           </div>
         `;
         htmlholder1 += htmlF1;
-          document.getElementById('0000000001').innerHTML = htmlholder1;
+          document.querySelector('.receid00001-js').innerHTML = htmlholder1;
            fun15storage(); 
       }
-    }
     
    /* if (display.innerHTML === 'div-3') {
       let htmlholder3 = '';
@@ -444,7 +450,7 @@ function groupingitmem() {
         `;
         htmlholder3 += htmlF3;
         if (display.innerHTML === 'div-3') {
-          document.getElementById('0000000113').innerHTML = htmlholder3;
+          document.getElementById('000000015').innerHTML = htmlholder3;
         }
             
       }
@@ -615,8 +621,10 @@ function groupingitmem() {
 
 fun12();
 function fun12() {
+  const R1 = document.querySelector('.R1');
+  const R2 = document.querySelector('.R2');
   const serlername = document.getElementById('serler-name');
-  if (serlername.value === 'Iliasu') {
+  if (R1.innerHTML <= 5) {
     let totalpovider = 0;
     for (let i = 0; i < receiptholder.length; i++) {
       const totalObject = receiptholder[i];
@@ -624,13 +632,13 @@ function fun12() {
       totalpovider += Number(itemamount);
       document.getElementById('sub-total').innerHTML = `${totalpovider} Frs`;
     }
-  }else if (serlername.value === 'Eugene') {
-    let totalpovider2 = 0;
-    for (let i = 0; i < receiptholder2.length; i++) {
-      const totalObject2 = receiptholder2[i];
-      const { itemamount } = totalObject2;
-      totalpovider2 += Number(itemamount);
-      document.querySelector('.sub-total2').innerHTML = `${totalpovider2} Frs`;
+  }else if ( R2.innerHTML < 5 ) {
+    let totalpovider1 = 0;
+    for (let i = 0; i < receiptholder1.length; i++) {
+      const totalObject1 = receiptholder1[i];
+      const { itemamount } = totalObject1;
+      totalpovider1 += Number(itemamount);
+      document.querySelector('.sub-total1').innerHTML = `${totalpovider1} Frs`;
     }
   }
   
@@ -868,6 +876,8 @@ function fun14() {
 
 
 function fun11() {
+  const R1 = document.querySelector('.R1');
+  const R2 = document.querySelector('.R2');
   const display = document.querySelector('.A400');
   const serlername3 = document.getElementById('serler-name');
   let itemname = names.value;
@@ -877,7 +887,7 @@ function fun11() {
   let itemamount = amount.innerHTML;
   
   
-  if (serlername3.value === 'Iliasu') {
+  if (R1.innerHTML < 5) {
 
     let matchingitems;
 
@@ -898,12 +908,23 @@ function fun11() {
         itemunit,
         itemamount
       })
+      console.log('hello');
     }
     
     groupingitmem();
     fun12();
-  }else if (serlername3.value === 'Eugene') {
-    if (display.className === `A400 div-1`) {
+  }else if (R1.innerHTML === '5' && R2.innerHTML < 5) {
+    let matchingitems1;
+
+    receiptholder1.forEach(item => {
+      if (itemname === item.itemname && itemdescription === item.itemdescription) {
+        matchingitems1 = item;
+      }
+    });
+   if (matchingitems1) {
+      matchingitems1.itemquantity = Number(matchingitems1.itemquantity)  + Number(itemquantity);
+      matchingitems1.itemamount = Number(matchingitems1.itemquantity)*Number(matchingitems1.itemunit);
+    }else {
       receiptholder1.push({
         itemname,
         itemdescription,
@@ -911,44 +932,8 @@ function fun11() {
         itemunit,
         itemamount
       })
-      groupingitmem();
-      fun12();
+      console.log('hello2');
     }
-    
-    if (display.innerHTML === 'div-3') {
-      receiptholder3.push({
-        itemname,
-        itemdescription,
-        itemquantity,
-        itemunit,
-        itemamount
-      })
-      groupingitmem();
-      fun12();
-    }
-    if (display.innerHTML === 'div-4') {
-      receiptholder4.push({
-        itemname,
-        itemdescription,
-        itemquantity,
-        itemunit,
-        itemamount
-      })
-      groupingitmem();
-      fun12();
-    }
-    if (display.innerHTML === 'div-5') {
-      receiptholder5.push({
-        itemname,
-        itemdescription,
-        itemquantity,
-        itemunit,
-        itemamount
-      })
-      groupingitmem();
-      fun12();
-    }
-    
     
     groupingitmem();
     fun12();
