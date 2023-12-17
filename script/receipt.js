@@ -238,17 +238,70 @@ function fun3() {
   const serlername = document.getElementById('serler-name');
   const rSellername = document.querySelector('.p-seller');
   const dateC = document.querySelector('.current-date');
+  const R1 = document.querySelector('.R1');
+  const R2 = document.querySelector('.R2');
+  const R3 = document.querySelector('.R3');
+  const R4 = document.querySelector('.R4');
+  const R5 = document.querySelector('.R5');
 
   if (cusName.value !== '') {
     rCusname.innerHTML = cusName.value;
+    if (R1.innerHTML === '5' && R2.innerHTML <= 5) {
+      document.querySelector('.R-cus-name1').innerHTML = rCusname.innerHTML;
+    }
+    if (R2.innerHTML === '5' && R3.innerHTML <= 5) {
+      document.querySelector('.R-cus-name2').innerHTML = rCusname.innerHTML;
+    }
+    if (R3.innerHTML === '5' && R4.innerHTML <= 5) {
+      document.querySelector('.R-cus-name3').innerHTML = rCusname.innerHTML;
+    }
+    if (R4.innerHTML === '5' && R5.innerHTML <= 5) {
+      document.querySelector('.R-cus-name4').innerHTML = rCusname.innerHTML;
+    }
   }
   if (cusTel.value !== '') {
     rCusnum.innerHTML = cusTel.value;
+    if (R1.innerHTML === '5' && R2.innerHTML <= 5) {
+      document.querySelector('.cus-num1').innerHTML = rCusnum.innerHTML;
+    }
+    if (R2.innerHTML === '5' && R3.innerHTML <= 5) {
+      document.querySelector('.cus-num2').innerHTML = rCusnum.innerHTML;
+    }
+    if (R3.innerHTML === '5' && R4.innerHTML <= 5) {
+      document.querySelector('.cus-num3').innerHTML = rCusnum.innerHTML;
+    }
+    if (R4.innerHTML === '5' && R5.innerHTML <= 5) {
+      document.querySelector('.cus-num4').innerHTML = rCusnum.innerHTML;
+    }
   }
   if (serlername.value !== '') {
     rSellername.innerHTML = serlername.value;
+    if (R1.innerHTML === '5' && R2.innerHTML <= 5) {
+      document.querySelector('.p-seller1').innerHTML = rSellername.innerHTML;
+    }
+    if (R2.innerHTML === '5' && R3.innerHTML <= 5) {
+      document.querySelector('.p-seller2').innerHTML = rSellername.innerHTML;
+    }
+    if (R3.innerHTML === '5' && R4.innerHTML <= 5) {
+      document.querySelector('.p-seller3').innerHTML = rSellername.innerHTML;
+    }
+    if (R4.innerHTML === '5' && R5.innerHTML <= 5) {
+      document.querySelector('.p-seller4').innerHTML = rSellername.innerHTML;
+    }
   }
-  dateC.innerHTML = Date(Date) ; 
+  dateC.innerHTML = Date(Date) ;
+  if (R1.innerHTML === '5' && R2.innerHTML <= 5) {
+    document.querySelector('.current-date1').innerHTML = Date(Date);
+  }
+  if (R2.innerHTML === '5' && R3.innerHTML <= 5) {
+    document.querySelector('.current-date2').innerHTML = Date(Date);
+  }
+  if (R3.innerHTML === '5' && R4.innerHTML <= 5) {
+    document.querySelector('.current-date3').innerHTML = Date(Date);
+  }
+  if (R4.innerHTML === '5' && R5.innerHTML <= 5) {
+    document.querySelector('.current-date4').innerHTML = Date(Date);
+  } 
 }
 
 function fun4() {
@@ -294,6 +347,8 @@ function groupingitmem() {
   const R1 = document.querySelector('.R1');
   const R2 = document.querySelector('.R2');
   const R3 = document.querySelector('.R3');
+  const R4 = document.querySelector('.R4');
+  const R5 = document.querySelector('.R5');
   
   if (R1.innerHTML <= 5 ) {
     let htmlholder1 = '';
@@ -401,116 +456,6 @@ function groupingitmem() {
            console.log('hello3');
       }
     
-   /* 
-    if (display.innerHTML === 'div-4') {
-      let htmlholder4 = '';
-      for (let i = 0; i < receiptholder4.length; i++) {
-        const itemsObject4 = receiptholder4[i];
-        const { itemname, itemdescription, itemquantity, itemunit, itemamount } = itemsObject4;
-        const htmlF4 = `
-          <div class="name-option abc">
-            ${itemname}
-            <div class="option-button" id="option-btn">
-              <button class="delete-button">delete</button>
-              <button class="return-button">cancel</button>
-            </div>
-          </div>
-          <div class="description2-holder abd">
-            <p class="description2-text">${itemdescription}</p>
-            <div class="description2-input dstn-holder" >
-              <select id="description2" >
-                <option value="emty">emty</option>
-                <option value="Carton">Carton</option>
-                <option value="Palette">Palette</option>
-                <option value="Bag">Bag</option>
-                <option value="Parket">Parket</option>
-                <option value="Tin">Tin</option>
-                <option value="Liter">Liter</option>
-                <option value="sachets">sachets</option>
-              </select>
-              <button class="d-cancel-button">OK</button>
-            </div>
-          </div>
-          <div class="quantiy2-holder abd">
-            <p class="quantiy2-text" >${itemquantity}</p>
-              <input type="number" min="0" id="Quantity2" class="qnty2">
-          </div>
-          <div class="abd unb">
-            ${itemunit}
-          </div>
-          <div class="abd una">
-            ${itemamount}
-          </div>
-          <div class="dt-a">
-            <button onclick="
-              receiptholder4.splice(${i}, 1)
-              groupingitmem();
-              fun12();
-            "class="delete-action">delete</button>
-          </div>
-        `;
-        htmlholder4 += htmlF4;
-        if (display.innerHTML === 'div-4') {
-          document.getElementById('0000001114').innerHTML = htmlholder4;
-        }
-          
-      }
-    }
-    if (display.innerHTML === 'div-5') {
-      let htmlholder5 = '';
-      for (let i = 0; i < receiptholder5.length; i++) {
-        const itemsObject5 = receiptholder5[i];
-        const { itemname, itemdescription, itemquantity, itemunit, itemamount } = itemsObject5;
-        const htmlF5 = `
-          <div class="name-option abc">
-            ${itemname}
-            <div class="option-button" id="option-btn">
-              <button class="delete-button">delete</button>
-              <button class="return-button">cancel</button>
-            </div>
-          </div>
-          <div class="description2-holder abd">
-            <p class="description2-text">${itemdescription}</p>
-            <div class="description2-input dstn-holder" >
-              <select id="description2" >
-                <option value="emty">emty</option>
-                <option value="Carton">Carton</option>
-                <option value="Palette">Palette</option>
-                <option value="Bag">Bag</option>
-                <option value="Parket">Parket</option>
-                <option value="Tin">Tin</option>
-                <option value="Liter">Liter</option>
-                <option value="sachets">sachets</option>
-              </select>
-              <button class="d-cancel-button">OK</button>
-            </div>
-          </div>
-          <div class="quantiy2-holder abd">
-            <p class="quantiy2-text" >${itemquantity}</p>
-              <input type="number" min="0" id="Quantity2" class="qnty2">
-          </div>
-          <div class="abd unb">
-            ${itemunit}
-          </div>
-          <div class="abd una">
-            ${itemamount}
-          </div>
-          <div class="dt-a">
-            <button onclick="
-              receiptholder5.splice(${i}, 1)
-              groupingitmem();
-              fun12();
-            "class="delete-action">delete</button>
-          </div>
-        `;
-        htmlholder5 += htmlF5;
-        if (display.innerHTML === 'div-5') {
-          document.getElementById('0000011115').innerHTML = htmlholder5;
-        }
-          
-      }
-    }*/
-
   }
   if (R2.innerHTML === '5' && R3.innerHTML <= 5) {
     let htmlholder2 = '';
@@ -565,12 +510,13 @@ function groupingitmem() {
           
     }
   }
-  if (serlername.value === 'Felix') {
-    let htmlholder2 = '';
-    for (let i = 0; i < receiptholder2.length; i++) {
-      const itemsObject2 = receiptholder2[i];
-      const { itemname, itemdescription, itemquantity, itemunit, itemamount } = itemsObject2;
-      const htmlF2 = `
+  if (R3.innerHTML === '5' && R4.innerHTML <= 5) {
+    let htmlholder3 = '';
+    for (let i = 0; i < receiptholder3.length; i++) {
+      document.querySelector('.R4').innerHTML = receiptholder3.length;
+      const itemsObject3 = receiptholder3[i];
+      const { itemname, itemdescription, itemquantity, itemunit, itemamount } = itemsObject3;
+      const htmlF3 = `
         <div class="name-option abc">
           ${itemname}
           <div class="option-button" id="option-btn">
@@ -606,15 +552,68 @@ function groupingitmem() {
         </div>
         <div class="dt-a">
           <button onclick="
-            receiptholder2.splice(${i}, 1)
+            receiptholder3.splice(${i}, 1)
             groupingitmem();
             fun12();
           "class="delete-action">delete</button>
         </div>
       `;
-      htmlholder2 += htmlF2;
-        document.querySelector('.new-screen-js').innerHTML = htmlholder2;
-        
+      htmlholder3 += htmlF3;
+        document.querySelector('.receid00113-js').innerHTML = htmlholder3;
+          
+    }
+  }
+  if (R4.innerHTML === '5' && R5.innerHTML <= 5) {
+    let htmlholder4 = '';
+    for (let i = 0; i < receiptholder4.length; i++) {
+      document.querySelector('.R5').innerHTML = receiptholder4.length;
+      const itemsObject4 = receiptholder4[i];
+      const { itemname, itemdescription, itemquantity, itemunit, itemamount } = itemsObject4;
+      const htmlF4 = `
+        <div class="name-option abc">
+          ${itemname}
+          <div class="option-button" id="option-btn">
+            <button class="delete-button">delete</button>
+            <button class="return-button">cancel</button>
+          </div>
+        </div>
+        <div class="description2-holder abd">
+          <p class="description2-text">${itemdescription}</p>
+          <div class="description2-input dstn-holder" >
+            <select id="description2" >
+              <option value="emty">emty</option>
+              <option value="Carton">Carton</option>
+              <option value="Palette">Palette</option>
+              <option value="Bag">Bag</option>
+              <option value="Parket">Parket</option>
+              <option value="Tin">Tin</option>
+              <option value="Liter">Liter</option>
+              <option value="sachets">sachets</option>
+            </select>
+            <button class="d-cancel-button">OK</button>
+          </div>
+        </div>
+        <div class="quantiy2-holder abd">
+          <p class="quantiy2-text" >${itemquantity}</p>
+            <input type="number" min="0" id="Quantity2" class="qnty2">
+        </div>
+        <div class="abd unb">
+          ${itemunit}
+        </div>
+        <div class="abd una">
+          ${itemamount}
+        </div>
+        <div class="dt-a">
+          <button onclick="
+            receiptholder4.splice(${i}, 1)
+            groupingitmem();
+            fun12();
+          "class="delete-action">delete</button>
+        </div>
+      `;
+      htmlholder4 += htmlF4;
+        document.querySelector('.receid01114-js').innerHTML = htmlholder4;
+          
     }
   }
 }
@@ -625,6 +624,8 @@ function fun12() {
   const R1 = document.querySelector('.R1');
   const R2 = document.querySelector('.R2');
   const R3 = document.querySelector('.R3');
+  const R4 = document.querySelector('.R4');
+  const R5 = document.querySelector('.R5');
   const serlername = document.getElementById('serler-name');
   if (R1.innerHTML <= 5) {
     let totalpovider = 0;
@@ -651,6 +652,24 @@ function fun12() {
       const { itemamount } = totalObject2;
       totalpovider2 += Number(itemamount);
       document.getElementById('sub-tota2').innerHTML = `${totalpovider2} Frs`;
+    }
+  }
+  if (R3.innerHTML === '5' && R4.innerHTML <= 5) {
+    let totalpovider3 = 0;
+    for (let i = 0; i < receiptholder3.length; i++) {
+      const totalObject3 = receiptholder3[i];
+      const { itemamount } = totalObject3;
+      totalpovider3 += Number(itemamount);
+      document.getElementById('sub-total3').innerHTML = `${totalpovider3} Frs`;
+    }
+  }
+  if (R4.innerHTML === '5' && R5.innerHTML <= 5) {
+    let totalpovider4 = 0;
+    for (let i = 0; i < receiptholder4.length; i++) {
+      const totalObject4 = receiptholder4[i];
+      const { itemamount } = totalObject4;
+      totalpovider4 += Number(itemamount);
+      document.getElementById('sub-tota4').innerHTML = `${totalpovider4} Frs`;
     }
   }
 }
@@ -890,6 +909,8 @@ function fun11() {
   const R1 = document.querySelector('.R1');
   const R2 = document.querySelector('.R2');
   const R3 = document.querySelector('.R3');
+  const R4 = document.querySelector('.R4');
+  const R5 = document.querySelector('.R5');
   const display = document.querySelector('.A400');
   const serlername3 = document.getElementById('serler-name');
   let itemname = names.value;
@@ -906,7 +927,6 @@ function fun11() {
     receiptholder.forEach(item => {
       if (itemname === item.itemname && itemdescription === item.itemdescription) {
         matchingitems = item;
-        console.log('hello');
       }
     });
     if (matchingitems) {
@@ -920,7 +940,6 @@ function fun11() {
         itemunit,
         itemamount
       })
-      console.log('hello');
     }
     
     groupingitmem();
@@ -944,7 +963,6 @@ function fun11() {
         itemunit,
         itemamount
       })
-      console.log('hello2');
     }
     
     groupingitmem();
@@ -968,24 +986,58 @@ function fun11() {
         itemunit,
         itemamount
       })
-      console.log('hello2');
+    }
+    
+    groupingitmem();
+    fun12();
+  }else if (R3.innerHTML === '5' && R4.innerHTML < 5) {
+    let matchingitems3;
+
+    receiptholder3.forEach(item => {
+      if (itemname === item.itemname && itemdescription === item.itemdescription) {
+        matchingitems3 = item;
+      }
+    });
+   if (matchingitems3) {
+      matchingitems3.itemquantity = Number(matchingitems3.itemquantity)  + Number(itemquantity);
+      matchingitems3.itemamount = Number(matchingitems3.itemquantity)*Number(matchingitems3.itemunit);
+    }else {
+      receiptholder3.push({
+        itemname,
+        itemdescription,
+        itemquantity,
+        itemunit,
+        itemamount
+      })
+    }
+    
+    groupingitmem();
+    fun12();
+  }else if (R4.innerHTML === '5' && R5.innerHTML < 5) {
+    let matchingitems4;
+
+    receiptholder4.forEach(item => {
+      if (itemname === item.itemname && itemdescription === item.itemdescription) {
+        matchingitems4 = item;
+      }
+    });
+   if (matchingitems4) {
+      matchingitems4.itemquantity = Number(matchingitems4.itemquantity)  + Number(itemquantity);
+      matchingitems4.itemamount = Number(matchingitems4.itemquantity)*Number(matchingitems4.itemunit);
+    }else {
+      receiptholder4.push({
+        itemname,
+        itemdescription,
+        itemquantity,
+        itemunit,
+        itemamount
+      })
     }
     
     groupingitmem();
     fun12();
   }
-   if (serlername3.value === 'Felix') {
-    receiptholder2.push({
-      itemname,
-      itemdescription,
-      itemquantity,
-      itemunit,
-      itemamount
-    })
-    groupingitmem();
-    fun12();
-    fun15storage();
-  }
+
   console.log(display.className);
   names.value = 'emty';
   description.value = 'emty';
