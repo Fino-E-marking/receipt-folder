@@ -1044,5 +1044,15 @@ function fun11() {
   quantity.value =  0;
   unit.innerHTML = 0;
   document.querySelector('.Amount').innerHTML = (quantity.value)*(unit.innerHTML);
+  fun13()
 }
+fun13()
+function fun13() {
+  const R1 = document.querySelector('.R1');
+  const R2 = document.querySelector('.R2');
+  const R3 = document.querySelector('.R3');
+  const R4 = document.querySelector('.R4');
+  const R5 = document.querySelector('.R5');
 
+  document.querySelector('.n-items').innerHTML = Number(R1.innerHTML) + Number(R2.innerHTML) + Number(R3.innerHTML) + Number(R4.innerHTML) + Number(R5.innerHTML) ;
+}

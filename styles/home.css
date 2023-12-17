@@ -114,7 +114,7 @@ body{
   display: grid;
   grid-template-rows: 100px 1fr 20px;
   min-height: 200px;
-  margin-bottom: 40px;
+  margin-top: 40px;
 }
 .R-cus-name,.p-seller,.cus-num{
   flex: 1;
@@ -323,6 +323,9 @@ body{
   .dt-a,.title-holder,.rt-n{
     display: none;
   }
+  .reciept-footer{
+    width: 100%;
+  }
 }
 
 .delete-action{
@@ -384,4 +387,18 @@ hr{
 .r-notist div{
   background-color: white;
   padding-left: 5px;
+}
+
+.reciept-footer{
+  font-weight: bold;
+  text-align: start;
+  width: 83%;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+.reciept-footer div{
+  display: flex;
+}
+.first-rpt{
+  margin: 0;
 }
