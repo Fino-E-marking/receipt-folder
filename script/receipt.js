@@ -15,7 +15,10 @@ names.addEventListener('input', fun2)
 description.addEventListener('input', fun2);
 quantity.addEventListener('input', fun2);
 addD.addEventListener('click', fun14);
-amountpayed.addEventListener('input', fun15)
+amountpayed.addEventListener('input', fun15);
+amountpayed.addEventListener('blur', fun16);
+amountpayed.addEventListener('mouseleave', fun16)
+amountpayed.addEventListener('click', fun17);
 addButton.addEventListener('click', fun3);
 deleteButton.addEventListener('click', fun4);
 addButton.addEventListener('click', fun11);
@@ -35,9 +38,16 @@ function fun14() {
   discount.value = '';
 }
 function fun15() {
-  const givenA = document.querySelector('.a-payed').innerHTML;
-  const balanceholder = document.querySelector('.hide-balance').innerHTML;
-  const unpayedholder = document.querySelector('.hide-unpayed').innerHTML;
+  if (amountpayed.value !== '') {
+    document.querySelector('.a-payed').innerHTML = `${amountpayed.value}Frs`;
+  }else {
+    document.querySelector('.a-payed').innerHTML = `--` 
+  }
+  
+}
+function fun16() {
+  const balanceholder = document.getElementById('hide-balance');
+  const unpayedholder = document.getElementById('hide-unpayed');
   const stotal1 = document.getElementById('sub-total');
   const stotal2 = document.querySelector('.sub-total1-js');  
   const stotal3 = document.getElementById('sub-tota2');  
@@ -45,18 +55,50 @@ function fun15() {
   const stotal5 = document.getElementById('sub-tota2');
   const ane = Number(stotal1.innerHTML)  + Number(stotal2.innerHTML) + Number(stotal3.innerHTML) + Number(stotal4.innerHTML) + Number(stotal5.innerHTML);
   const total = ane
-  document.querySelector('.a-payed').innerHTML = `${amountpayed.value}Frs`;
   if (amountpayed.value !== '') {
-    if (amountpayed.value > total) {
-      const bl = Number(amountpayed.value) - total;
-      document.querySelector('.balance').innerHTML = `${bl}Frs` ;
-      
-    }else {
+   if (amountpayed.value < total && unpayedholder.classList.contains('hide-unpayed') && balanceholder.classList.contains ('hide-balance')){
+      unpayedholder.classList.remove('hide-unpayed');
       const bil = total - Number(amountpayed.value);
       document.querySelector('.unpayed').innerHTML = `${bil}Frs`
-       
+      console.log('hello'); 
+    }else if (amountpayed.value < total && unpayedholder.classList.contains('hide-unpayed') && !balanceholder.classList.contains ('hide-balance')){
+      balanceholder.classList.add('hide-balance');
+      unpayedholder.classList.remove('hide-unpayed');
+      const bil = total - Number(amountpayed.value);
+      document.querySelector('.unpayed').innerHTML = `${bil}Frs`;
+      console.log('hello1'); 
+    }else if (amountpayed.value > total && unpayedholder.classList.contains('hide-unpayed') && balanceholder.classList.contains ('hide-balance')) {
+      balanceholder.classList.remove('hide-balance');
+      const bl = Number(amountpayed.value) - total;
+      document.querySelector('.balance').innerHTML = `${bl}Frs` ;
+      console.log('hello2');
+    }else if (amountpayed.value > total && !unpayedholder.classList.contains('hide-unpayed') && balanceholder.classList.contains ('hide-balance')) {
+      unpayedholder.classList.add('hide-unpayed')
+      balanceholder.classList.remove('hide-balance');
+      const bl = Number(amountpayed.value) - total;
+      document.querySelector('.balance').innerHTML = `${bl}Frs` ;
+      console.log('hello3');
+    }else {
+      unpayedholder.id = 'hide-unpayed';
+      balanceholder.id = 'hide-balance';
+      console.log('hello4');
     }
+    console.log(unpayedholder.classList.contains('hide-unpayed') && balanceholder.classList.contains ('hide-balance'));
+    console.log(balanceholder.classList.contains ('hide-balance'));
+    console.log(!unpayedholder.classList.contains('hide-unpayed') && balanceholder.classList.contains ('hide-balance'));
+    console.log(!balanceholder.classList.contains ('hide-balance'));
+  } 
+}
+
+function fun17() {
+  const balanceholder = document.getElementById('hide-balance');
+  const unpayedholder = document.getElementById('hide-unpayed');
+  if (!unpayedholder.classList.contains('hide-unpayed') && balanceholder.classList.contains ('hide-balance')) {
+    unpayedholder.classList.add('hide-unpayed');
+    balanceholder.classList.add('hide-balance');
+    console.log('hello6');
   }
+  
 }
 
 function fun1() {
@@ -436,6 +478,7 @@ function groupingitmem() {
             groupingitmem();
             fun12();
             fun13();
+            fun16();
           "class="delete-action">delete</button>
         </div>
       `;
@@ -490,6 +533,7 @@ function groupingitmem() {
               groupingitmem();
               fun12();
               fun13();
+              fun16();
             "class="delete-action">delete</button>
           </div>
         `;
@@ -544,6 +588,7 @@ function groupingitmem() {
             groupingitmem();
             fun12();
             fun13();
+            fun16();
           "class="delete-action">delete</button>
         </div>
       `;
@@ -598,6 +643,7 @@ function groupingitmem() {
             groupingitmem();
             fun12();
             fun13();
+            fun16();
           "class="delete-action">delete</button>
         </div>
       `;
@@ -652,6 +698,7 @@ function groupingitmem() {
             groupingitmem();
             fun12();
             fun13();
+            fun16();
           "class="delete-action">delete</button>
         </div>
       `;
@@ -1090,6 +1137,7 @@ function fun11() {
   document.querySelector('.Amount').innerHTML = (quantity.value)*(unit.innerHTML);
   discount.value = '';
   fun13()
+  fun16();
 }
 fun13()
 function fun13() {
