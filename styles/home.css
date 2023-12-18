@@ -423,3 +423,7 @@ hr{
   border-radius: 5px;
   cursor: pointer;
 }
+
+.hide-balance,.hide-unpayed{
+  display: none;
+}

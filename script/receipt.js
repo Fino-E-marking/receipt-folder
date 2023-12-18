@@ -36,17 +36,27 @@ function fun14() {
 }
 function fun15() {
   const givenA = document.querySelector('.a-payed').innerHTML;
-  const balance = document.querySelector('.balance').innerHTML;
-  const unpayed = document.querySelector('.unpayed').innerHTML;
+  const balanceholder = document.querySelector('.hide-balance').innerHTML;
+  const unpayedholder = document.querySelector('.hide-unpayed').innerHTML;
   const stotal1 = document.getElementById('sub-total');
   const stotal2 = document.querySelector('.sub-total1-js');  
   const stotal3 = document.getElementById('sub-tota2');  
   const stotal4 = document.getElementById('sub-total3');
   const stotal5 = document.getElementById('sub-tota2');
   const ane = Number(stotal1.innerHTML)  + Number(stotal2.innerHTML) + Number(stotal3.innerHTML) + Number(stotal4.innerHTML) + Number(stotal5.innerHTML);
-  const total = 
+  const total = ane
   document.querySelector('.a-payed').innerHTML = `${amountpayed.value}Frs`;
-
+  if (amountpayed.value !== '') {
+    if (amountpayed.value > total) {
+      const bl = Number(amountpayed.value) - total;
+      document.querySelector('.balance').innerHTML = `${bl}Frs` ;
+      bal
+    }else {
+      const bil = total - Number(amountpayed.value);
+      document.querySelector('.unpayed').innerHTML = `${bil}Frs`
+       
+    }
+  }
 }
 
 function fun1() {
