@@ -402,3 +402,9 @@ hr{
 .first-rpt{
   margin: 0;
 }
+.p1{
+  width: 165px;
+}
+.balance,.a-payed,.g-total,.n-items{
+  flex: 1;
+}

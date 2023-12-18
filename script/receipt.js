@@ -395,6 +395,7 @@ function groupingitmem() {
             receiptholder.splice(${i}, 1)
             groupingitmem();
             fun12();
+            fun13();
           "class="delete-action">delete</button>
         </div>
       `;
@@ -448,6 +449,7 @@ function groupingitmem() {
               receiptholder1.splice(${i}, 1)
               groupingitmem();
               fun12();
+              fun13();
             "class="delete-action">delete</button>
           </div>
         `;
@@ -502,6 +504,7 @@ function groupingitmem() {
             receiptholder2.splice(${i}, 1)
             groupingitmem();
             fun12();
+            fun13();
           "class="delete-action">delete</button>
         </div>
       `;
@@ -555,6 +558,7 @@ function groupingitmem() {
             receiptholder3.splice(${i}, 1)
             groupingitmem();
             fun12();
+            fun13();
           "class="delete-action">delete</button>
         </div>
       `;
@@ -608,6 +612,7 @@ function groupingitmem() {
             receiptholder4.splice(${i}, 1)
             groupingitmem();
             fun12();
+            fun13();
           "class="delete-action">delete</button>
         </div>
       `;
@@ -626,14 +631,14 @@ function fun12() {
   const R3 = document.querySelector('.R3');
   const R4 = document.querySelector('.R4');
   const R5 = document.querySelector('.R5');
-  const serlername = document.getElementById('serler-name');
+  
   if (R1.innerHTML <= 5) {
     let totalpovider = 0;
     for (let i = 0; i < receiptholder.length; i++) {
       const totalObject = receiptholder[i];
       const { itemamount } = totalObject;
       totalpovider += Number(itemamount);
-      document.getElementById('sub-total').innerHTML = `${totalpovider} Frs`;
+      document.getElementById('sub-total').innerHTML = totalpovider;
     }
   }
   if (R1.innerHTML === '5' && R2.innerHTML <= 5) {
@@ -642,7 +647,7 @@ function fun12() {
       const totalObject1 = receiptholder1[i];
       const { itemamount } = totalObject1;
       totalpovider1 += Number(itemamount);
-      document.querySelector('.sub-total1-js').innerHTML = `${totalpovider1} Frs`;
+      document.querySelector('.sub-total1-js').innerHTML = totalpovider1;
     }
   }
   if (R2.innerHTML === '5' && R3.innerHTML <= 5) {
@@ -651,7 +656,7 @@ function fun12() {
       const totalObject2 = receiptholder2[i];
       const { itemamount } = totalObject2;
       totalpovider2 += Number(itemamount);
-      document.getElementById('sub-tota2').innerHTML = `${totalpovider2} Frs`;
+      document.getElementById('sub-tota2').innerHTML = totalpovider2;
     }
   }
   if (R3.innerHTML === '5' && R4.innerHTML <= 5) {
@@ -660,7 +665,7 @@ function fun12() {
       const totalObject3 = receiptholder3[i];
       const { itemamount } = totalObject3;
       totalpovider3 += Number(itemamount);
-      document.getElementById('sub-total3').innerHTML = `${totalpovider3} Frs`;
+      document.getElementById('sub-total3').innerHTML = totalpovider3;
     }
   }
   if (R4.innerHTML === '5' && R5.innerHTML <= 5) {
@@ -669,9 +674,10 @@ function fun12() {
       const totalObject4 = receiptholder4[i];
       const { itemamount } = totalObject4;
       totalpovider4 += Number(itemamount);
-      document.getElementById('sub-tota4').innerHTML = `${totalpovider4} Frs`;
+      document.getElementById('sub-tota4').innerHTML = totalpovider4;
     }
   }
+  
 }
 
 
@@ -1053,6 +1059,20 @@ function fun13() {
   const R3 = document.querySelector('.R3');
   const R4 = document.querySelector('.R4');
   const R5 = document.querySelector('.R5');
+  const stotal1 = document.getElementById('sub-total');
+  const stotal2 = document.querySelector('.sub-total1-js');  
+  const stotal3 = document.getElementById('sub-tota2');  
+  const stotal4 = document.getElementById('sub-total3');
+  const stotal5 = document.getElementById('sub-tota2');
 
-  document.querySelector('.n-items').innerHTML = Number(R1.innerHTML) + Number(R2.innerHTML) + Number(R3.innerHTML) + Number(R4.innerHTML) + Number(R5.innerHTML) ;
+  const mbc = (Number(R1.innerHTML) + Number(R2.innerHTML) + Number(R3.innerHTML) + Number(R4.innerHTML) + Number(R5.innerHTML)) ;
+  if (mbc >= 10) {
+    document.querySelector('.n-items').innerHTML = mbc;
+  }else {
+    document.querySelector('.n-items').innerHTML = `0${mbc}`;
+  }
+
+  const ane = Number(stotal1.innerHTML)  + Number(stotal2.innerHTML) + Number(stotal3.innerHTML) + Number(stotal4.innerHTML) + Number(stotal5.innerHTML);
+   document.querySelector('.g-total').innerHTML = `${ane}Frs`
+  console.log(stotal1.innerHTML);
 }
