@@ -50,7 +50,7 @@ function fun15() {
     if (amountpayed.value > total) {
       const bl = Number(amountpayed.value) - total;
       document.querySelector('.balance').innerHTML = `${bl}Frs` ;
-      bal
+      
     }else {
       const bil = total - Number(amountpayed.value);
       document.querySelector('.unpayed').innerHTML = `${bil}Frs`
