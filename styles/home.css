@@ -76,10 +76,14 @@ body{
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.prices div,.cus-name-holder,.seller-name-holder{
+.prices div,.cus-name-holder,.seller-name-holder,.amount-payed-holder,.discount-holder{
   font-size: 20px;
   font-weight: bold;
   display: flex;
+}
+.discount-holder{
+  color: green;
+  margin: 5px;
 }
 .amnt-div{
   justify-content: center;
@@ -87,7 +91,7 @@ body{
 .prc-dic{
   justify-content: end;
 }
-.cus-name-holder input,#serler-name{
+.cus-name-holder input,#serler-name,#discount,#amount-payed{
   border: none;
   font-size: 17px;
   width: 400px;
@@ -407,4 +411,14 @@ hr{
 }
 .balance,.a-payed,.g-total,.n-items{
   flex: 1;
+}
+
+.add-d  {
+  width: 100px;
+  margin-left: 20px;
+  color: white;
+  font-weight: bold;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
 }

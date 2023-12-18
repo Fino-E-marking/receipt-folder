@@ -3,6 +3,8 @@ let description = document.getElementById('description');
 let quantity = document.getElementById('Quantity');
 let unit = document.querySelector('.unit-price');
 let amount = document.querySelector('.Amount');
+let addD = document.querySelector('.add-d');
+let discount = document.getElementById('discount');
 let addButton = document.querySelector('.add-to-cart-button');
 let deleteButton = document.querySelector('.name-option');
 let newreceiptbook = document.querySelector('.add-receipt-button');
@@ -11,6 +13,7 @@ description.addEventListener('input', fun1);
 names.addEventListener('input', fun2)
 description.addEventListener('input', fun2);
 quantity.addEventListener('input', fun2);
+addD.addEventListener('click', fun14)
 addButton.addEventListener('click', fun3);
 deleteButton.addEventListener('click', fun4);
 addButton.addEventListener('click', fun11);
@@ -19,6 +22,17 @@ addButton.addEventListener('click', fun11);
 function fun2() {
   document.querySelector('.Amount').innerHTML = (quantity.value)*(unit.innerHTML); 
 }
+function fun14() {
+  if (discount.value !== '') {
+    document.querySelector('.unit-price').innerHTML = Number(unit.innerHTML) - Number(discount.value);
+    fun2();
+  }else {
+    fun1();
+    fun2();
+  }
+  discount.value = '';
+}
+  
 function fun1() {
   document.querySelector('.Amount').innerHTML = (quantity.value)*(unit.innerHTML);
   if (description.value === 'emty') {
@@ -1044,12 +1058,12 @@ function fun11() {
     fun12();
   }
 
-  console.log(display.className);
   names.value = 'emty';
   description.value = 'emty';
   quantity.value =  0;
   unit.innerHTML = 0;
   document.querySelector('.Amount').innerHTML = (quantity.value)*(unit.innerHTML);
+  discount.value = '';
   fun13()
 }
 fun13()
