@@ -424,6 +424,6 @@ hr{
   cursor: pointer;
 }
 
-.hide-balance,.hide-unpayed{
+.hide-balance,.hide-unpayed,.hide-rcpt2,.hide-rcpt3,.hide-rcpt4,.hide-rcpt5{
   display: none;
 }
