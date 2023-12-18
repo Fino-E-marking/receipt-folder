@@ -421,4 +421,5 @@ hr{
   background-color: black;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }

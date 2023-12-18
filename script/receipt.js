@@ -5,6 +5,7 @@ let unit = document.querySelector('.unit-price');
 let amount = document.querySelector('.Amount');
 let addD = document.querySelector('.add-d');
 let discount = document.getElementById('discount');
+let amountpayed = document.getElementById('amount-payed');
 let addButton = document.querySelector('.add-to-cart-button');
 let deleteButton = document.querySelector('.name-option');
 let newreceiptbook = document.querySelector('.add-receipt-button');
@@ -13,7 +14,8 @@ description.addEventListener('input', fun1);
 names.addEventListener('input', fun2)
 description.addEventListener('input', fun2);
 quantity.addEventListener('input', fun2);
-addD.addEventListener('click', fun14)
+addD.addEventListener('click', fun14);
+amountpayed.addEventListener('input', fun15)
 addButton.addEventListener('click', fun3);
 deleteButton.addEventListener('click', fun4);
 addButton.addEventListener('click', fun11);
@@ -32,7 +34,21 @@ function fun14() {
   }
   discount.value = '';
 }
-  
+function fun15() {
+  const givenA = document.querySelector('.a-payed').innerHTML;
+  const balance = document.querySelector('.balance').innerHTML;
+  const unpayed = document.querySelector('.unpayed').innerHTML;
+  const stotal1 = document.getElementById('sub-total');
+  const stotal2 = document.querySelector('.sub-total1-js');  
+  const stotal3 = document.getElementById('sub-tota2');  
+  const stotal4 = document.getElementById('sub-total3');
+  const stotal5 = document.getElementById('sub-tota2');
+  const ane = Number(stotal1.innerHTML)  + Number(stotal2.innerHTML) + Number(stotal3.innerHTML) + Number(stotal4.innerHTML) + Number(stotal5.innerHTML);
+  const total = 
+  document.querySelector('.a-payed').innerHTML = `${amountpayed.value}Frs`;
+
+}
+
 function fun1() {
   document.querySelector('.Amount').innerHTML = (quantity.value)*(unit.innerHTML);
   if (description.value === 'emty') {
@@ -406,7 +422,7 @@ function groupingitmem() {
         </div>
         <div class="dt-a">
           <button onclick="
-            receiptholder.splice(${i}, 1)
+            receiptholder.splice(${i}, 1);
             groupingitmem();
             fun12();
             fun13();
@@ -414,7 +430,7 @@ function groupingitmem() {
         </div>
       `;
       htmlholder1 += htmlF;
-        document.querySelector('.rb-body').innerHTML = htmlholder1;  
+        document.querySelector('.rb-body').innerHTML = htmlholder1;
     }
   }
   if (R1.innerHTML === '5' && R2.innerHTML <= 5) {
@@ -469,7 +485,6 @@ function groupingitmem() {
         `;
         htmlholder1 += htmlF1;
           document.querySelector('.receid00001-js').innerHTML = htmlholder1; 
-           console.log('hello3');
       }
     
   }
@@ -1085,8 +1100,10 @@ function fun13() {
   }else {
     document.querySelector('.n-items').innerHTML = `0${mbc}`;
   }
-
+  
   const ane = Number(stotal1.innerHTML)  + Number(stotal2.innerHTML) + Number(stotal3.innerHTML) + Number(stotal4.innerHTML) + Number(stotal5.innerHTML);
-   document.querySelector('.g-total').innerHTML = `${ane}Frs`
-  console.log(stotal1.innerHTML);
+   document.querySelector('.g-total').innerHTML = `${ane}Frs`;
+
 }
+  
+  
