@@ -13,25 +13,25 @@ let reciept2 = document.getElementById('reciept-bd-00001');
 let reciept3 = document.getElementById('reciept-bd-00012');
 let reciept4 = document.getElementById('reciept-bd-00113');
 let reciept5 = document.getElementById('reciept-bd-01114');
-names.addEventListener('input', fun1)
+names.addEventListener('input', fun1);
 description.addEventListener('input', fun1);
 names.addEventListener('input', fun2)
 description.addEventListener('input', fun2);
 quantity.addEventListener('input', fun2);
-addD.addEventListener('click', fun14);
+addD.addEventListener('click', fun10);
 amountpayed.addEventListener('input', fun15);
 amountpayed.addEventListener('blur', fun16);
-amountpayed.addEventListener('mouseleave', fun16)
+amountpayed.addEventListener('mouseleave', fun16);
 amountpayed.addEventListener('click', fun17);
 addButton.addEventListener('click', fun3);
 deleteButton.addEventListener('click', fun4);
 addButton.addEventListener('click', fun11);
 newreceiptbook.addEventListener('click', fun14);
-console.log(reciept3.classList);
+
 function fun2() {
   document.querySelector('.Amount').innerHTML = (quantity.value)*(unit.innerHTML); 
 }
-function fun14() {
+function fun10() {
   if (discount.value !== '') {
     document.querySelector('.unit-price').innerHTML = Number(unit.innerHTML) - Number(discount.value);
     fun2();
@@ -806,233 +806,7 @@ function fun12() {
 }
 
 
-/*
-const nextreceipt = [];
-fun13();
-function fun13() {
-  let nextreceipthtml = '';
-  for (let i = 0; i < nextreceipt.length; i++) {
-    const nextreceiptelement = nextreceipt[i];
-    const nextRhtml = `
-      <div class="reciept-book">
-        <div class="reciept-header">
-          <div class="rt-1">
-            <p>E PROVISION</p>
-          </div>
-          <div class="rt-2">
-            <p>Order on:</p>
-            <p class="current-date"></p>
-          </div>
-          <div class="rt-3">
-            <P>Ndop Main-Market</P>
-            <p>shed 64</p>
-          </div>
-          <div class="rt-4">
-            <p>Customer Name:</p>
-            <p class="R-cus-name">zxcvhjjhgfdxcvbnhvgcf</p>
-          </div>
-          <div class="rt-5">
-            <p>Tel: 683404522</p>
-          </div>
-          <div class="rt-6">
-            <p>Customer Tel:</p>
-            <p class="cus-num">76542123456</p>
-          </div>
-          <div class="r-seller">
-            <p>Seller:</p>
-            <p class="p-seller">Iliasu</p>
-          </div>
-        </div>
-        <div class="reciept-body">
-          <div class="rb-header">
-            <div>
-              <p>Item Name</p>
-            </div>
-            <div>
-              <p>Description</p>
-            </div>
-            <div>
-              <p>Quantity</p>
-            </div>
-            <div>
-              <p>Unit</p>
-            </div>
-            <div>
-              <p>Amount</p>
-            </div>
-            <div>
-              <p>option</p>
-            </div> 
-          </div>
-          <div class="rb-body rb-body2">
-          <div>
-              <p>Ovaltine 400g</p>
-            </div>
-            <div>
-              <p>tin</p>
-            </div>
-            <div>
-              <p>10</p>
-            </div>
-            <div>
-              <p>2500F</p>
-            </div>
-            <div>
-              <p>2500000F</p>
-            </div> 
-            <div class="dt-a">
-              <button class="delete-action">delete</button>
-            </div>
-          </div>
-        </div>
-        <div class="total-holder">
-          <p class="t-text2">Thanks for shoping at E Provision</p>
-          <p class="t-text">Total</p>
-          <p class="total-price sub-total2" id="sub-total ">20000F</p>
-        </div>
-        <div>
-          <p>No refund of money if good is taken in good condition.</p>
-          <div class="signature-section">
-            <p>Manager Signature: ...............................</p>
-            <p>Customer Signature: ................................</p>
-          </div>
-        </div>
-      </div>
-    `;
-    nextreceipthtml += nextRhtml;
-    document.querySelector('.Newr-js').innerHTML = nextreceipthtml;
-    console.log(i);
-    const display = document.querySelector('.A400');
-    const ordercontain = document.querySelectorAll('.rb-body');
-    ordercontain.forEach((value, index) => {
-      if (index === 0) {
-        display.innerHTML = 'div-1';
-      }
-      if (index === 1) {
-        display.classList.add('div-1');
-       ordercontain[1].id = '0000000001' 
-      }
-      if (index === 2) {
-        display.innerHTML = 'div-2';
-        display.classList.add('div-2');
-       ordercontain[2].id = '0000000012' 
-      }
-      /*if (index === 3) {
-        display.innerHTML = 'div-3';
-       ordercontain[3].id = '0000000113' 
-      }
-      if (index === 4) {
-        display.innerHTML = 'div-4';
-       ordercontain[4].id = '0000001114' 
-      }
-      if (index === 5) {
-        display.innerHTML = 'div-5';
-       ordercontain[5].id = '0000011115' 
-      }
-      
-      
-
-    });
-    
-    console.log(ordercontain.classList);
-    document.querySelector('.C400').innerHTML = nextreceipt.length
-  }
-}*/
-
 function fun14() {
- /* const nextRhtml2 = `
-      <div class="reciept-book n2">
-        <div class="reciept-header">
-          <div class="rt-1">
-            <p>E PROVISION</p>
-          </div>
-          <div class="rt-2">
-            <p>Order on:</p>
-            <p class="current-date"></p>
-          </div>
-          <div class="rt-3">
-            <P>Ndop Main-Market</P>
-            <p>shed 64</p>
-          </div>
-          <div class="rt-4">
-            <p>Customer Name:</p>
-            <p class="R-cus-name">zxcvhjjhgfdxcvbnhvgcf</p>
-          </div>
-          <div class="rt-5">
-            <p>Tel: 683404522</p>
-          </div>
-          <div class="rt-6">
-            <p>Customer Tel:</p>
-            <p class="cus-num">76542123456</p>
-          </div>
-          <div class="r-seller">
-            <p>Seller:</p>
-            <p class="p-seller">Iliasu</p>
-          </div>
-        </div>
-        <div class="reciept-body">
-          <div class="rb-header">
-            <div>
-              <p>Item Name</p>
-            </div>
-            <div>
-              <p>Description</p>
-            </div>
-            <div>
-              <p>Quantity</p>
-            </div>
-            <div>
-              <p>Unit</p>
-            </div>
-            <div>
-              <p>Amount</p>
-            </div>
-            <div>
-              <p>option</p>
-            </div> 
-          </div>
-          <div class="rb-body">
-          <div>
-              <p>Ovaltine 400g</p>
-            </div>
-            <div>
-              <p>tin</p>
-            </div>
-            <div>
-              <p>10</p>
-            </div>
-            <div>
-              <p>2500F</p>
-            </div>
-            <div>
-              <p>2500000F</p>
-            </div> 
-            <div class="dt-a">
-              <button class="delete-action">delete</button>
-            </div>
-          </div>
-        </div>
-        <div class="total-holder">
-          <p class="t-text2">Thanks for shoping at E Provision</p>
-          <p class="t-text">Total</p>
-          <p class="total-price" id="sub-total">20000F</p>
-        </div>
-        <div>
-          <p>No refund of money if good is taken in good condition.</p>
-          <div class="signature-section">
-            <p>Manager Signature: ...............................</p>
-            <p>Customer Signature: ................................</p>
-          </div>
-        </div>
-      </div>
-    `;
-    let m3 = nextRhtml2;
-    nextreceipt.push(m3);
-    fun13();
-      groupingitmem();
-      fun12();
-      fun15storage(); 
-  */
   const R1 = document.querySelector('.R1');
   const R2 = document.querySelector('.R2');
   const R3 = document.querySelector('.R3');
@@ -1247,10 +1021,31 @@ function fun13() {
   }else {
     document.querySelector('.n-items').innerHTML = `0${mbc}`;
   }
+  if (stotal1.innerHTML === '' && stotal2.innerHTML === '' && stotal3.innerHTML === '' && stotal4.innerHTML === '' && stotal5.innerHTML === '') {
+    document.querySelector('.g-total').innerHTML = '00';
+  }
+    const ane = Number(stotal1.innerHTML)  + Number(stotal2.innerHTML) + Number(stotal3.innerHTML) + Number(stotal4.innerHTML) + Number(stotal5.innerHTML);
+    const ane1 = Number(stotal1.innerHTML);
+    const ane2 = Number(stotal1.innerHTML) + Number(stotal2.innerHTML);
+    const ane3 = Number(stotal1.innerHTML) + Number(stotal2.innerHTML) + Number(stotal3.innerHTML);
+    const ane4 = Number(stotal1.innerHTML) + Number(stotal2.innerHTML) + Number(stotal3.innerHTML) + Number(stotal4.innerHTML);
+    document.querySelector('.g-total').innerHTML = `${ane}Frs`;
   
-  const ane = Number(stotal1.innerHTML)  + Number(stotal2.innerHTML) + Number(stotal3.innerHTML) + Number(stotal4.innerHTML) + Number(stotal5.innerHTML);
-   document.querySelector('.g-total').innerHTML = `${ane}Frs`;
+  if (reciept2.classList.contains('hide-rcpt2') && reciept3.classList.contains('hide-rcpt3') && reciept4.classList.contains('hide-rcpt4') && reciept5.classList.contains('hide-rcpt5') && R1.innerHTML < 5 ) {
 
+    document.querySelector('.g-total').innerHTML = `${ane1}Frs`;
+  }else if (!reciept2.classList.contains('hide-rcpt2') && reciept3.classList.contains('hide-rcpt3') && reciept4.classList.contains('hide-rcpt4') && reciept5.classList.contains('hide-rcpt5')) {
+
+    document.querySelector('.g-total').innerHTML = `${ane2}Frs`;
+  }else if (!reciept2.classList.contains('hide-rcpt2') && !reciept3.classList.contains('hide-rcpt3') && reciept4.classList.contains('hide-rcpt4') && reciept5.classList.contains('hide-rcpt5')) {
+
+    document.querySelector('.g-total').innerHTML = `${ane3}Frs`;
+  }else if (!reciept2.classList.contains('hide-rcpt2') && !reciept3.classList.contains('hide-rcpt3') && !reciept4.classList.contains('hide-rcpt4') && reciept5.classList.contains('hide-rcpt5')) {
+
+    document.querySelector('.g-total').innerHTML = `${ane4}Frs`;
+  }else{
+    document.querySelector('.g-total').innerHTML = `${ane}Frs`;
+  }
 }
   
   
