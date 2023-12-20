@@ -21,7 +21,7 @@ quantity.addEventListener('input', fun2);
 addD.addEventListener('click', fun10);
 amountpayed.addEventListener('input', fun15);
 amountpayed.addEventListener('blur', fun16);
-amountpayed.addEventListener('mouseleave', fun16);
+//amountpayed.addEventListener('mouseleave', fun16);
 amountpayed.addEventListener('click', fun17);
 addButton.addEventListener('click', fun3);
 deleteButton.addEventListener('click', fun4);
@@ -57,8 +57,29 @@ function fun16() {
   const stotal3 = document.getElementById('sub-tota2');  
   const stotal4 = document.getElementById('sub-total3');
   const stotal5 = document.getElementById('sub-tota2');
+  const R1 = document.querySelector('.R1');
+  const R2 = document.querySelector('.R2');
+  const R3 = document.querySelector('.R3');
+  const R4 = document.querySelector('.R4');
+  const R5 = document.querySelector('.R5');
   const ane = Number(stotal1.innerHTML)  + Number(stotal2.innerHTML) + Number(stotal3.innerHTML) + Number(stotal4.innerHTML) + Number(stotal5.innerHTML);
-  const total = ane
+  let total = ane
+  const ane1 = Number(stotal1.innerHTML);
+    const ane2 = Number(stotal1.innerHTML) + Number(stotal2.innerHTML);
+    const ane3 = Number(stotal1.innerHTML) + Number(stotal2.innerHTML) + Number(stotal3.innerHTML);
+    const ane4 = Number(stotal1.innerHTML) + Number(stotal2.innerHTML) + Number(stotal3.innerHTML) + Number(stotal4.innerHTML);
+  if (reciept2.classList.contains('hide-rcpt2') && reciept3.classList.contains('hide-rcpt3') && reciept4.classList.contains('hide-rcpt4') && reciept5.classList.contains('hide-rcpt5') && R1.innerHTML < 5 ) {
+    total = ane1;
+  }else if (!reciept2.classList.contains('hide-rcpt2') && reciept3.classList.contains('hide-rcpt3') && reciept4.classList.contains('hide-rcpt4') && reciept5.classList.contains('hide-rcpt5')) {
+    total = ane2;
+  }else if (!reciept2.classList.contains('hide-rcpt2') && !reciept3.classList.contains('hide-rcpt3') && reciept4.classList.contains('hide-rcpt4') && reciept5.classList.contains('hide-rcpt5')) {
+    total = ane3;
+  }else if (!reciept2.classList.contains('hide-rcpt2') && !reciept3.classList.contains('hide-rcpt3') && !reciept4.classList.contains('hide-rcpt4') && reciept5.classList.contains('hide-rcpt5')) {
+    total = ane4;
+  }else{
+    total = ane;
+  }
+  
   if (amountpayed.value !== '') {
    if (amountpayed.value < total && unpayedholder.classList.contains('hide-unpayed') && balanceholder.classList.contains ('hide-balance')){
       unpayedholder.classList.remove('hide-unpayed');
