@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/search.css">
   <title>Receipt</title>
 </head>
 <body>
@@ -16,66 +17,11 @@
   <div class="input-order">
     <div class="mx">
       <div class="input">
-        <div>
-          <label for="name">Item Name:</label>
-          <select id="name">
-            <option value="emty">emty</option>
-            <option value="Champion rice 25kg">Champion rice 25kg</option>
-            <option value="Champion rice 50kg">Champion rice 50kg</option>
-            <option value="Habiba 25kg">Habiba 25kg</option>
-            <option value="Selecter 25kg">Selecter 25kg</option>
-            <option value="Amigo 5kg">Amigo 5kg</option>
-            <option value="Amigo 25kg">Amigo 25kg</option>
-            <option value="Amigo 50kg">Amigo 50kg</option>
-            <option value="OLA omo 1kg">OLA omo 1kg</option>
-            <option value="OLA omo halfkg">OLA omo halfkg</option>
-            <option value="Mada omo 1kg">Mada omo 1kg</option>
-            <option value="Mada omo halfkg">Mada omo halfkg</option>
-            <option value="Ariel omo 1kg">Ariel omo 1kg</option>
-            <option value="Mayor 5l">Mayor 5l</option>
-            <option value="Mayor 3L">Mayor 3L</option>
-            <option value="Mayor 1l">Mayor 1l</option>
-            <option value="Oilio 5l">Oilio 5l</option>
-            <option value="Oilio 1l">Oilio 1l</option>
-            <option value="Active 5l">Active 5l</option>
-            <option value="Wity chocolate 2.8l">Wity chocolate 2.8l</option>
-            <option value="Choco loco chocolate 2.8l">Choco loco chocolate 2.8l</option>
-            <option value="Bambi chocolate 2.8l">Bambi chocolate 2.8l</option>
-            <option value="Tartiana chocolate 2.8l">Tartiana chocolate 2.8l</option>
-            <option value="Valledor butter 2.7l">Valledor butter 2.7l</option>
-            <option value="La croix 5l">La croix 5l</option>
-            <option value="La croix 1l">La croix 1l</option>
-            <option value="Baron 5l">Baron 5l</option>
-            <option value="La croix  sachets">La croix  sachets</option>
-            <option value="Iron sponge red(12)">Iron sponge red(12)</option>
-            <option value="Iron sponge net(12)">Iron sponge net(12)</option>
-            <option value="Magic mamy sponge(24)">Magic mamy sponge(24)</option>
-            <option value="Savon mayor">Savon mayor</option>
-            <option value="Savon clean">Savon clean</option>
-            <option value="Savon uno">Savon uno</option>
-            <option value="Savon  anti crise">Savon  anti crise</option>
-            <option value="Savon pakeh">Savon pakeh</option>
-            <option value="Savon faco">Savon faco</option>
-            <option value="Trophe can(big)">Trophe can(big)</option>
-            <option value="Trophe can(small)">Trophe can(small)</option>
-            <option value="Hiro (big)">Hiro (big)</option>
-            <option value="Hiro (small)">Hiro (small)</option>
-            <option value="Barvaria bottle">Barvaria bottle</option>
-            <option value="Barvaria can(big)">Barvaria can(big)</option>
-            <option value="Malter guiness">Malter guiness</option>
-            <option value="Power malt">Power malt</option>
-            <option value="Vapur">Vapur</option>
-            <option value="Bullet can">Bullet can</option>
-            <option value="Bullet sachet">Bullet sachet</option>
-            <option value="Henieken (1stclass)">Henieken (1stclass)</option>
-            <option value="Henieken (2ndclass)">Henieken (2ndclass)</option>
-            <option value="Booter">Booter</option>
-            <option value="3X energy drink">3X energy drink</option>
-            <option value="Skoll">Skoll</option>
-            <option value="super morl 1l">super mor 1l</option>
-            <option value="super morl 10l">super mor 10l</option>
-            
-          </select>
+        <div class="search-holder">
+          <label for="name">Item Name:</label><br>
+          <input type="text" id="name" placeholder="Item name" autocomplete="off">
+          <div class="resultboxF">
+          </div>
         </div>
         <div>
           <label for="Description">Description:</label><br>
@@ -130,6 +76,7 @@
         <label for="amount-payed">Amount Payed:</label>
         <input type="text" id="amount-payed" class="mc">
       </div>
+      
     </div>
 
     <div class="r-notist rt-n" id="rr2">
@@ -202,8 +149,6 @@
                 <p class="description2-text"></p>
               </div>
               <div class="quantiy2-holder abd">
-                <p class="quantiy2-text" ></p>
-                  <input type="number" min="0" id="Quantity2" class="qnty2">
               </div>
               <div class="abd unb">
               </div>

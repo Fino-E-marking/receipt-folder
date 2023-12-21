@@ -230,38 +230,6 @@ body{
   grid-template-columns: 1fr 1fr;
   margin-top: 5px;
 }
-.name-option,.description2-holder,.quantiy2-holder  {
-  position: relative;
-  cursor: pointer;
-}
-
-.option-button{
-  border: solid;
-  border-width: 1px;
-  max-width: 110px;
-  padding: 5px;
-  position: absolute;
-  bottom: -33px;
-  left: 100px;
-  
-}
-
-#option-btn,.dstn-holder,#Quantity2{
-  display: none;
-  pointer-events: none;
-}
-#Quantity2,.qnty2{
-  position: absolute ;
-}
-.delete-button{
-  background-color: red;
-  color: white;
-  border: none;
-  padding: 5px;
-  border-radius: 2px;
-  cursor: pointer;
-  transition: 0.4 ease;
-}
 .return-button,.d-cancel-button{
   background-color: white;
   border: solid;
@@ -275,11 +243,6 @@ body{
   height: 20px;
   padding: 0px 3px;
   margin-top: 2px;
-}
-#Qantity2,.qnty2{
-  max-width: 40px;
-  height: 15px;
-  background-color: blue;
 }
 .description2-input{
   position: absolute;

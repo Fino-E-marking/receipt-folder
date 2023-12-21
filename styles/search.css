@@ -1,0 +1,45 @@
+.resultboxF ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.search-holder{
+  width: 200px;
+  font-weight: bold;
+  position: relative;
+  padding: 0;
+}
+.search-holder input{
+  width: 195px;
+  height: 17px;
+  padding-left: 2px;
+
+}
+.resultboxF{
+  background-color: white;
+  border: solid gray 1px;
+  margin-top: 1px;
+  border-radius: 3px;
+  color: rgb(75, 75, 75);
+  position: absolute;
+  right: 0;
+  left: 10px;
+  font-size: 14px;
+}
+.resultboxF li{
+  text-align: start;
+  padding-left: 3px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.resultboxF li:hover{
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+.hide-borded{
+  border: none;
+}
