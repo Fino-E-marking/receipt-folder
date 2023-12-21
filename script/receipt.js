@@ -466,30 +466,12 @@ function groupingitmem() {
       const htmlF = `
         <div class="name-option abc">
           ${itemname}
-          <div class="option-button" id="option-btn">
-            <button class="delete-button">delete</button>
-            <button class="return-button">cancel</button>
-          </div>
         </div>
         <div class="description2-holder abd">
           <p class="description2-text">${itemdescription}</p>
-          <div class="description2-input dstn-holder" >
-            <select id="description2" >
-              <option value="emty">emty</option>
-              <option value="Carton">Carton</option>
-              <option value="Palette">Palette</option>
-              <option value="Bag">Bag</option>
-              <option value="Parket">Parket</option>
-              <option value="Tin">Tin</option>
-              <option value="Liter">Liter</option>
-              <option value="sachets">sachets</option>
-            </select>
-            <button class="d-cancel-button">OK</button>
-          </div>
         </div>
         <div class="quantiy2-holder abd">
           <p class="quantiy2-text" >${itemquantity}</p>
-            <input type="number" min="0" id="Quantity2" class="qnty2">
         </div>
         <div class="abd unb">
           ${itemunit}
@@ -523,30 +505,12 @@ function groupingitmem() {
             const htmlF1 = `
               <div class="name-option abc">
                 ${itemname}
-                <div class="option-button" id="option-btn">
-                  <button class="delete-button">delete</button>
-                  <button class="return-button">cancel</button>
-                </div>
               </div>
               <div class="description2-holder abd">
                 <p class="description2-text">${itemdescription}</p>
-                <div class="description2-input dstn-holder" >
-                  <select id="description2" >
-                    <option value="emty">emty</option>
-                    <option value="Carton">Carton</option>
-                    <option value="Palette">Palette</option>
-                    <option value="Bag">Bag</option>
-                    <option value="Parket">Parket</option>
-                    <option value="Tin">Tin</option>
-                    <option value="Liter">Liter</option>
-                    <option value="sachets">sachets</option>
-                  </select>
-                  <button class="d-cancel-button">OK</button>
-                </div>
               </div>
               <div class="quantiy2-holder abd">
                 <p class="quantiy2-text" >${itemquantity}</p>
-                  <input type="number" min="0" id="Quantity2" class="qnty2">
               </div>
               <div class="abd unb">
                 ${itemunit}
@@ -583,30 +547,12 @@ function groupingitmem() {
           const htmlF2 = `
             <div class="name-option abc">
               ${itemname}
-              <div class="option-button" id="option-btn">
-                <button class="delete-button">delete</button>
-                <button class="return-button">cancel</button>
-              </div>
             </div>
             <div class="description2-holder abd">
               <p class="description2-text">${itemdescription}</p>
-              <div class="description2-input dstn-holder" >
-                <select id="description2" >
-                  <option value="emty">emty</option>
-                  <option value="Carton">Carton</option>
-                  <option value="Palette">Palette</option>
-                  <option value="Bag">Bag</option>
-                  <option value="Parket">Parket</option>
-                  <option value="Tin">Tin</option>
-                  <option value="Liter">Liter</option>
-                  <option value="sachets">sachets</option>
-                </select>
-                <button class="d-cancel-button">OK</button>
-              </div>
             </div>
             <div class="quantiy2-holder abd">
               <p class="quantiy2-text" >${itemquantity}</p>
-                <input type="number" min="0" id="Quantity2" class="qnty2">
             </div>
             <div class="abd unb">
               ${itemunit}
@@ -643,30 +589,12 @@ function groupingitmem() {
           const htmlF3 = `
             <div class="name-option abc">
               ${itemname}
-              <div class="option-button" id="option-btn">
-                <button class="delete-button">delete</button>
-                <button class="return-button">cancel</button>
-              </div>
             </div>
             <div class="description2-holder abd">
               <p class="description2-text">${itemdescription}</p>
-              <div class="description2-input dstn-holder" >
-                <select id="description2" >
-                  <option value="emty">emty</option>
-                  <option value="Carton">Carton</option>
-                  <option value="Palette">Palette</option>
-                  <option value="Bag">Bag</option>
-                  <option value="Parket">Parket</option>
-                  <option value="Tin">Tin</option>
-                  <option value="Liter">Liter</option>
-                  <option value="sachets">sachets</option>
-                </select>
-                <button class="d-cancel-button">OK</button>
-              </div>
             </div>
             <div class="quantiy2-holder abd">
               <p class="quantiy2-text" >${itemquantity}</p>
-                <input type="number" min="0" id="Quantity2" class="qnty2">
             </div>
             <div class="abd unb">
               ${itemunit}
@@ -703,30 +631,12 @@ function groupingitmem() {
           const htmlF4 = `
             <div class="name-option abc">
               ${itemname}
-              <div class="option-button" id="option-btn">
-                <button class="delete-button">delete</button>
-                <button class="return-button">cancel</button>
-              </div>
             </div>
             <div class="description2-holder abd">
               <p class="description2-text">${itemdescription}</p>
-              <div class="description2-input dstn-holder" >
-                <select id="description2" >
-                  <option value="emty">emty</option>
-                  <option value="Carton">Carton</option>
-                  <option value="Palette">Palette</option>
-                  <option value="Bag">Bag</option>
-                  <option value="Parket">Parket</option>
-                  <option value="Tin">Tin</option>
-                  <option value="Liter">Liter</option>
-                  <option value="sachets">sachets</option>
-                </select>
-                <button class="d-cancel-button">OK</button>
-              </div>
             </div>
             <div class="quantiy2-holder abd">
               <p class="quantiy2-text" >${itemquantity}</p>
-                <input type="number" min="0" id="Quantity2" class="qnty2">
             </div>
             <div class="abd unb">
               ${itemunit}
@@ -1014,7 +924,7 @@ function fun11() {
     }
   }
 
-  names.value = 'emty';
+  names.value = '';
   description.value = 'emty';
   quantity.value =  0;
   unit.innerHTML = 0;
