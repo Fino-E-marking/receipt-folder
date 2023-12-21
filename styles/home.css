@@ -415,3 +415,20 @@ hr{
 .hide-balance,.hide-unpayed,.hide-rcpt2,.hide-rcpt3,.hide-rcpt4,.hide-rcpt5{
   display: none;
 }
+
+.alerat-bd{
+  color: green;
+  font-weight: bold;
+  font-size: 23px;
+  width: 200px;
+  position: absolute;
+  top: 55px;
+  left: 40%;
+  right: 40%;
+}
+.hide-alert-js{
+  display: none;
+}
+.input{
+  position: relative;
+}

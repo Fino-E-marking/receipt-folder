@@ -27,25 +27,40 @@ addButton.addEventListener('click', fun3);
 deleteButton.addEventListener('click', fun4);
 addButton.addEventListener('click', fun11);
 newreceiptbook.addEventListener('click', fun14);
+addButton.addEventListener('click', fun16);
 
 function fun2() {
   document.querySelector('.Amount').innerHTML = (quantity.value)*(unit.innerHTML); 
 }
 function fun10() {
-  if (discount.value !== '') {
-    document.querySelector('.unit-price').innerHTML = Number(unit.innerHTML) - Number(discount.value);
-    fun2();
+  const displayalert = document.querySelector('.alerat-bd');
+  if (unit.innerHTML !== '0' && discount.value !== '' && names.value !== '') {
+    if (discount.value !== '') {
+      if (names.value !== '') {
+        document.querySelector('.unit-price').innerHTML = Number(unit.innerHTML) - Number(discount.value);
+        fun2();
+        discount.value = '';
+        displayalert.innerText = 'Discount sucessful';
+        displayalert.classList.remove('hide-alert-js');
+        setTimeout(() => {
+          displayalert.classList.add('hide-alert-js');
+        }, 1000)
+      }
+    }
   }else {
     fun1();
     fun2();
   }
-  discount.value = '';
 }
 function fun15() {
+  const balanceholder = document.getElementById('hide-balance');
+  const unpayedholder = document.getElementById('hide-unpayed');
   if (amountpayed.value !== '') {
     document.querySelector('.a-payed').innerHTML = `${amountpayed.value}Frs`;
+    unpayedholder.id = 'hide-unpayed';
+    balanceholder.id = 'hide-balance';
   }else {
-    document.querySelector('.a-payed').innerHTML = `--` 
+    document.querySelector('.a-payed').innerHTML = `0Frs` 
   }
   
 }
@@ -103,16 +118,50 @@ function fun16() {
       const bl = Number(amountpayed.value) - total;
       document.querySelector('.balance').innerHTML = `${bl}Frs` ;
       console.log('hello3');
-    }else {
-      unpayedholder.id = 'hide-unpayed';
-      balanceholder.id = 'hide-balance';
+    } else {
+      unpayedholder.classList.add('hide-unpayed')
+      balanceholder.classList.add('hide-balance');
       console.log('hello4');
     }
-    console.log(unpayedholder.classList.contains('hide-unpayed') && balanceholder.classList.contains ('hide-balance'));
-    console.log(balanceholder.classList.contains ('hide-balance'));
-    console.log(!unpayedholder.classList.contains('hide-unpayed') && balanceholder.classList.contains ('hide-balance'));
-    console.log(!balanceholder.classList.contains ('hide-balance'));
   } 
+
+  const displayalert = document.querySelector('.alerat-bd');
+  if (reciept2.classList.contains('hide-rcpt2') && reciept3.classList.contains('hide-rcpt3') && reciept4.classList.contains('hide-rcpt4') && reciept5.classList.contains('hide-rcpt5') && R1.innerHTML < 5 ) {
+    displayalert.innerText = 'Added to Receipt-1';
+    displayalert.classList.remove('hide-alert-js');
+    setTimeout(() => {
+      displayalert.classList.add('hide-alert-js');
+    }, 1000)
+    
+  }else if (!reciept2.classList.contains('hide-rcpt2') && reciept3.classList.contains('hide-rcpt3') && reciept4.classList.contains('hide-rcpt4') && reciept5.classList.contains('hide-rcpt5')) {
+
+    displayalert.innerText = 'Added to Receipt-2';
+    displayalert.classList.remove('hide-alert-js');
+    setTimeout(() => {
+      displayalert.classList.add('hide-alert-js');
+    }, 1000)
+  }else if (!reciept2.classList.contains('hide-rcpt2') && !reciept3.classList.contains('hide-rcpt3') && reciept4.classList.contains('hide-rcpt4') && reciept5.classList.contains('hide-rcpt5')) {
+
+    displayalert.innerText = 'Added to Receipt-3';
+    displayalert.classList.remove('hide-alert-js');
+    setTimeout(() => {
+      displayalert.classList.add('hide-alert-js');
+    }, 1000)
+  }else if (!reciept2.classList.contains('hide-rcpt2') && !reciept3.classList.contains('hide-rcpt3') && !reciept4.classList.contains('hide-rcpt4') && reciept5.classList.contains('hide-rcpt5')) {
+    displayalert.innerText = 'Added to Receipt-4';
+    displayalert.classList.remove('hide-alert-js');
+    setTimeout(() => {
+      displayalert.classList.add('hide-alert-js');
+    }, 1000)
+    document.querySelector('.g-total').innerHTML = `${ane4}Frs`;
+  }else{
+    displayalert.innerText = 'Added to Receipt-5';
+    displayalert.classList.remove('hide-alert-js');
+    setTimeout(() => {
+      displayalert.classList.add('hide-alert-js');
+    }, 1000)
+    document.querySelector('.g-total').innerHTML = `${ane}Frs`;
+  }
 }
 
 function fun17() {
@@ -353,7 +402,7 @@ function fun3() {
 
   if (cusName.value !== '') {
     rCusname.innerHTML = cusName.value;
-    if (R1.innerHTML === '5' && R2.innerHTML <= 5) {
+    if (R1.innerHTML === '10' && R2.innerHTML <= 5) {
       document.querySelector('.R-cus-name1').innerHTML = rCusname.innerHTML;
     }
     if (R2.innerHTML === '5' && R3.innerHTML <= 5) {
@@ -368,7 +417,7 @@ function fun3() {
   }
   if (cusTel.value !== '') {
     rCusnum.innerHTML = cusTel.value;
-    if (R1.innerHTML === '5' && R2.innerHTML <= 5) {
+    if (R1.innerHTML === '10' && R2.innerHTML <= 5) {
       document.querySelector('.cus-num1').innerHTML = rCusnum.innerHTML;
     }
     if (R2.innerHTML === '5' && R3.innerHTML <= 5) {
@@ -383,7 +432,7 @@ function fun3() {
   }
   if (serlername.value !== '') {
     rSellername.innerHTML = serlername.value;
-    if (R1.innerHTML === '5' && R2.innerHTML <= 5) {
+    if (R1.innerHTML === '10' && R2.innerHTML <= 5) {
       document.querySelector('.p-seller1').innerHTML = rSellername.innerHTML;
     }
     if (R2.innerHTML === '5' && R3.innerHTML <= 5) {
@@ -397,7 +446,7 @@ function fun3() {
     }
   }
   dateC.innerHTML = Date(Date) ;
-  if (R1.innerHTML === '5' && R2.innerHTML <= 5) {
+  if (R1.innerHTML === '10' && R2.innerHTML <= 5) {
     document.querySelector('.current-date1').innerHTML = Date(Date);
   }
   if (R2.innerHTML === '5' && R3.innerHTML <= 5) {
@@ -457,7 +506,7 @@ function groupingitmem() {
   const R4 = document.querySelector('.R4');
   const R5 = document.querySelector('.R5');
   
-  if (R1.innerHTML <= 5 ) {
+  if (R1.innerHTML <= 10 ) {
     let htmlholder1 = '';
     for (let i = 0; i < receiptholder.length; i++) {
       document.querySelector('.R1').innerHTML = (receiptholder.length);
@@ -493,9 +542,9 @@ function groupingitmem() {
         document.querySelector('.rb-body').innerHTML = htmlholder1;
     }
   }
-  if (R1.innerHTML === '5' && R2.innerHTML < 5) {
+  if (R1.innerHTML === '10' && R2.innerHTML < 5) {
     if (!reciept2.classList.contains('hide-rcpt2')) {
-      if (R1.innerHTML === '5' && R2.innerHTML <= 5) {
+      if (R1.innerHTML === '10' && R2.innerHTML <= 5) {
         let display = document.querySelector('.A400');
           let htmlholder1 = '';
           for (let i = 0; i < receiptholder1.length; i++) {
@@ -536,7 +585,7 @@ function groupingitmem() {
     }
   }
 
-  if (R1.innerHTML === '5' && R2.innerHTML === '5' && R3.innerHTML < 5) {
+  if (R1.innerHTML === '10' && R2.innerHTML === '5' && R3.innerHTML < 5) {
     if (!reciept3.classList.contains('hide-rcpt3')) {
       if (R2.innerHTML === '5' && R3.innerHTML <= 5) {
         let htmlholder2 = '';
@@ -578,7 +627,7 @@ function groupingitmem() {
     }
   }
 
-  if (R1.innerHTML === '5' && R2.innerHTML === '5' && R3.innerHTML === '5' && R4.innerHTML < 5) {
+  if (R1.innerHTML === '10' && R2.innerHTML === '5' && R3.innerHTML === '5' && R4.innerHTML < 5) {
     if (!reciept4.classList.contains('hide-rcpt4')) {
       if (R3.innerHTML === '5' && R4.innerHTML <= 5) {
         let htmlholder3 = '';
@@ -620,7 +669,7 @@ function groupingitmem() {
     }
   }
 
-  if (R1.innerHTML === '5' && R2.innerHTML === '5' && R3.innerHTML === '5' && R4.innerHTML === '5' && R5.innerHTML < 5) {
+  if (R1.innerHTML === '10' && R2.innerHTML === '5' && R3.innerHTML === '5' && R4.innerHTML === '5' && R5.innerHTML < 5) {
     if (!reciept5.classList.contains('hide-rcpt5')) {
       if (R4.innerHTML === '5' && R5.innerHTML <= 5) {
         let htmlholder4 = '';
@@ -673,7 +722,7 @@ function fun12() {
   const R4 = document.querySelector('.R4');
   const R5 = document.querySelector('.R5');
   
-  if (R1.innerHTML <= 5) {
+  if (R1.innerHTML <= 10) {
     let totalpovider = 0;
     for (let i = 0; i < receiptholder.length; i++) {
       const totalObject = receiptholder[i];
@@ -682,9 +731,9 @@ function fun12() {
       document.getElementById('sub-total').innerHTML = totalpovider;
     }
   }
-  if (R1.innerHTML === '5') {
+  if (R1.innerHTML === '10') {
     if (!reciept2.classList.contains('hide-rcpt2')) {
-      if (R1.innerHTML === '5' && R2.innerHTML <= 5) {
+      if (R1.innerHTML === '10' && R2.innerHTML <= 5) {
         let totalpovider1 = 0;
         for (let i = 0; i < receiptholder1.length; i++) {
           const totalObject1 = receiptholder1[i];
@@ -695,7 +744,7 @@ function fun12() {
       }
     }
   }
-  if (R1.innerHTML === '5' && R2.innerHTML === '5' && R3.innerHTML < 5) {
+  if (R1.innerHTML === '10' && R2.innerHTML === '5' && R3.innerHTML < 5) {
     if (!reciept3.classList.contains('hide-rcpt3')) {
       if (R2.innerHTML === '5' && R3.innerHTML <= 5) {
         let totalpovider2 = 0;
@@ -708,7 +757,7 @@ function fun12() {
       }
     }
   }
-  if (R1.innerHTML === '5' && R2.innerHTML === '5' && R3.innerHTML === '5' && R4.innerHTML < 5) {
+  if (R1.innerHTML === '10' && R2.innerHTML === '5' && R3.innerHTML === '5' && R4.innerHTML < 5) {
     if (!reciept4.classList.contains('hide-rcpt4')) {
       if (R3.innerHTML === '5' && R4.innerHTML <= 5) {
         let totalpovider3 = 0;
@@ -721,7 +770,7 @@ function fun12() {
       }
     }
   }
-  if (R1.innerHTML === '5' && R2.innerHTML === '5' && R3.innerHTML === '5' && R4.innerHTML === '5' && R5.innerHTML < 5) {
+  if (R1.innerHTML === '10' && R2.innerHTML === '5' && R3.innerHTML === '5' && R4.innerHTML === '5' && R5.innerHTML < 5) {
     if (!reciept5.classList.contains('hide-rcpt5')) {
       if (R4.innerHTML === '5' && R5.innerHTML <= 5) {
         let totalpovider4 = 0;
@@ -744,22 +793,22 @@ function fun14() {
   const R4 = document.querySelector('.R4');
   const R5 = document.querySelector('.R5');
 
-  if (R1.innerHTML === '5') {
+  if (R1.innerHTML === '10') {
     if (reciept2.classList.contains('hide-rcpt2')) {
       reciept2.classList.remove('hide-rcpt2');
     }
   }
-  if (R1.innerHTML === '5' && R2.innerHTML === '5' && R3.innerHTML < 5) {
+  if (R1.innerHTML === '10' && R2.innerHTML === '5' && R3.innerHTML < 5) {
     if (reciept3.classList.contains('hide-rcpt3')) {
       reciept3.classList.remove('hide-rcpt3');
     }
   }
-  if (R1.innerHTML === '5' && R2.innerHTML === '5' && R3.innerHTML === '5' && R4.innerHTML < 5) {
+  if (R1.innerHTML === '10' && R2.innerHTML === '5' && R3.innerHTML === '5' && R4.innerHTML < 5) {
     if (reciept4.classList.contains('hide-rcpt4')) {
       reciept4.classList.remove('hide-rcpt4');
     }
   }
-  if (R1.innerHTML === '5' && R2.innerHTML === '5' && R3.innerHTML === '5' && R4.innerHTML === '5' && R5.innerHTML < 5) {
+  if (R1.innerHTML === '10' && R2.innerHTML === '5' && R3.innerHTML === '5' && R4.innerHTML === '5' && R5.innerHTML < 5) {
     if (reciept5.classList.contains('hide-rcpt5')) {
       reciept5.classList.remove('hide-rcpt5');
     }
@@ -782,7 +831,7 @@ function fun11() {
   let itemunit = unit.innerHTML;
   let itemamount = amount.innerHTML;
   
-  if (R1.innerHTML < 5) {
+  if (R1.innerHTML < 10) {
 
     let matchingitems;
 
@@ -806,11 +855,11 @@ function fun11() {
     
     groupingitmem();
     fun12();
-  }else if (R1.innerHTML === '5' && R2.innerHTML < 5) {
+  }else if (R1.innerHTML === '10' && R2.innerHTML < 5) {
     if (reciept2.classList.contains('hide-rcpt2')) {
       alert(`Receipt-1 is full please open new receipt and readd this item`);
     }else{
-     if (R1.innerHTML === '5' && R2.innerHTML < 5) {
+     if (R1.innerHTML === '10' && R2.innerHTML < 5) {
         let matchingitems1;
     
         receiptholder1.forEach(item => {
@@ -835,7 +884,7 @@ function fun11() {
         fun12();
       }
     }
-  }else if (R1.innerHTML === '5' && R2.innerHTML === '5' && R3.innerHTML < 5) {
+  }else if (R1.innerHTML === '10' && R2.innerHTML === '5' && R3.innerHTML < 5) {
     if (reciept3.classList.contains('hide-rcpt3')) {
       alert(`Receipt-2 is full please open new receipt and readd this item`);
     }else{
@@ -864,7 +913,7 @@ function fun11() {
         fun12();
       }
     }
-  }else if (R1.innerHTML === '5' && R2.innerHTML === '5' && R3.innerHTML === '5' && R4.innerHTML < 5) {
+  }else if (R1.innerHTML === '10' && R2.innerHTML === '5' && R3.innerHTML === '5' && R4.innerHTML < 5) {
     if (reciept4.classList.contains('hide-rcpt4')) {
       alert(`Receipt-3 is full please open new receipt and readd this item`);
     }else{
@@ -893,7 +942,7 @@ function fun11() {
         fun12();
       }
     }
-  }else if (R1.innerHTML === '5' && R2.innerHTML === '5' && R3.innerHTML === '5' && R4.innerHTML === '5' && R5.innerHTML < 5) {
+  }else if (R1.innerHTML === '10' && R2.innerHTML === '5' && R3.innerHTML === '5' && R4.innerHTML === '5' && R5.innerHTML < 5) {
     if (reciept5.classList.contains('hide-rcpt5')) {
       alert(`Receipt-4 is full please open new receipt and readd this item`);
     }else{
@@ -930,7 +979,8 @@ function fun11() {
   unit.innerHTML = 0;
   document.querySelector('.Amount').innerHTML = (quantity.value)*(unit.innerHTML);
   discount.value = '';
-  fun13()
+  fun13();
+  fun16();
   fun16();
 }
 fun13()

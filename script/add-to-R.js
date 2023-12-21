@@ -101,3 +101,4 @@ function hideB() {
     resultbox.classList.remove('hide-borded');
   }
 };
+
