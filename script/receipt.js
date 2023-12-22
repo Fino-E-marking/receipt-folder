@@ -186,6 +186,9 @@ function fun1() {
       case (names.value === `Mayor 5l`):
         unit.innerHTML = 8000;
         break;
+      case (names.value === `Celor 5l`):
+        unit.innerHTML = 8500;
+        break;
       case (names.value === `Mayor 3L`):
         unit.innerHTML = 5000;
         break;
@@ -240,8 +243,14 @@ function fun1() {
       case (names.value === `Baron 5l`):
         unit.innerHTML = 5000;
         break;
-        case (names.value === `super morl 10l`):
+      case (names.value === `super morl 10l`):
         unit.innerHTML = 1500;
+        break;
+      case (names.value === `Hollandia big`):
+        unit.innerHTML = 1200;
+        break;
+      case (names.value === `Hallandia small`):
+        unit.innerHTML = 250;
         break;
   
       default: unit.innerHTML = 0;
@@ -271,8 +280,8 @@ function fun1() {
         unit.innerHTML = 13000;
         break;
       case (names.value === `OLA omo 1kg`):
-      unit.innerHTML = 12000;
-      break;
+        unit.innerHTML = 12000;
+        break;
       case (names.value === `OLA omo halfkg`):
         unit.innerHTML = 12000;
         break;
@@ -306,6 +315,51 @@ function fun1() {
         break;
       case (names.value === `Savon faco`):
         unit.innerHTML = 17500;
+        break;
+      case (names.value === `Tiara`):
+        unit.innerHTML = 23500;
+        break;
+      case (names.value === `Creamz biscuits`):
+        unit.innerHTML = 18500;
+        break;
+      case (names.value === `Familia spaghetti 500g`):
+        unit.innerHTML = 8000;
+        break;
+      case (names.value === `Familia spaghetti 250g`):
+        unit.innerHTML = 7500;
+        break;
+      case (names.value === `Crackers`):
+        unit.innerHTML = 12000;
+        break;
+      case (names.value === `Mayor 5l`):
+        unit.innerHTML = 30000;
+        break;
+      case (names.value === `Oilio 5l`):
+        unit.innerHTML = 37000;
+        break;
+      case (names.value === `Active 5l`):
+        unit.innerHTML = 29000;
+        break;
+      case (names.value === `Celor 5l`):
+        unit.innerHTML = 23500;
+        break;
+      case (names.value === `3in1 wine`):
+        unit.innerHTML = 3000;
+        break;
+      case (names.value === `Hollandia big`):
+        unit.innerHTML = 10000;
+        break;
+      case (names.value === `Hallandia smal`):
+        unit.innerHTML = 5000;
+        break;
+      case (names.value === `Roma tomat`):
+        unit.innerHTML = 4600;
+        break;
+      case (names.value === `Amor tomat`):
+        unit.innerHTML = 4500;
+        break;
+      case (names.value === `Mymy tomat`):
+        unit.innerHTML = 4600;
         break;
 
       default:unit.innerHTML = 0;
@@ -361,7 +415,7 @@ function fun1() {
       case (names.value === `Bullet sachet`):
         unit.innerHTML = 1700;
         break;
-        case (names.value === `Henieken (1stclass)`):
+      case (names.value === `Henieken (1stclass)`):
         unit.innerHTML = 19000;
         break;
       case (names.value === `Henieken (2ndclass)`):
@@ -376,15 +430,109 @@ function fun1() {
       case (names.value === `super morl 1l`):
         unit.innerHTML = 1500;
         break;
-        case (names.value === `Skoll`):
+      case (names.value === `Skoll`):
         unit.innerHTML = 21000;
+        break;
+      case (names.value === `Tiara`):
+        unit.innerHTML = 2000;
+        break;
+      case (names.value === `Alex condom`):
+        unit.innerHTML = 3700;
+        break;
+      case (names.value === `Creamz biscuits`):
+        unit.innerHTML = 500;
+        break;
+      case (names.value === `Bambil stick`):
+        unit.innerHTML = 2100;
+        break;
+      case (names.value === `Playing card`):
+        unit.innerHTML = 1900;
+        break;
+      case (names.value === `Marker`):
+        unit.innerHTML = 900;
+        break;
+      case (names.value === `Lipton`):
+        unit.innerHTML = 600;
+        break;
+      case (names.value === `Crackers`):
+        unit.innerHTML = 500;
+        break;
+      case (names.value === `Vigor doctor paste`):
+        unit.innerHTML = 500;
+        break;
+      case (names.value === `Mericle paste`):
+        unit.innerHTML = 500;
+        break;
+      case (names.value === `Small Colgate`):
+        unit.innerHTML = 400;
+        break;
+      case (names.value === `Gaslighter torch`):
+        unit.innerHTML = 3800;
+        break;
+      case (names.value === `Gaslighter no torch`):
+        unit.innerHTML = 3500;
+        break;
+      case (names.value === `Moontiger`):
+        unit.innerHTML = 350;
+        break;
+      case (names.value === `Candle`):
+        unit.innerHTML = 700;
+        break;
+      case (names.value === `Safety matches`):
+        unit.innerHTML = 200;
+        break;
+      case (names.value === `La croix  sachets`):
+        unit.innerHTML = 1200;
+        break;
+      case (names.value === `Iron sponge red(12)`):
+        unit.innerHTML = 500;
+        break;
+      case (names.value === `Iron sponge net(12`):
+        unit.innerHTML = 1000;
+        break;
+      case (names.value === `Magic mamy sponge(24`):
+        unit.innerHTML = 2000;
+        break;
+        case (names.value === `Familia spaghetti 500g`):
+          unit.innerHTML = 500;
+          break;
+        case (names.value === `Familia spaghetti 250g`):
+          unit.innerHTML = 250;
+          break;
+    
+      default: unit.innerHTML = 0;
+        break;
+
+    }
+  }else if (description.value === 'Row') {
+    switch (description.value === 'Row') {
+      case (names.value === `Roma tomat`):
+        unit.innerHTML = 1000;
+        break;
+      case (names.value === `Amor tomat`):
+        unit.innerHTML = 1000;
+        break;
+      case (names.value === `Mymy tomat`):
+        unit.innerHTML = 1000;
+        break;
+      case (names.value === `Lipton`):
+        unit.innerHTML = 10500;
+        break;
+      case (names.value === `Vigor doctor paste`):
+        unit.innerHTML = 2500;
+        break;
+      case (names.value === `Mericle paste`):
+        unit.innerHTML = 2500;
+        break;
+      case (names.value === `Small Colgate`):
+        unit.innerHTML = 4000;
         break;
     
       default: unit.innerHTML = 0;
         break;
     }
   }
-}
+}console.log(description === 'Row');
 
 function fun3() {
   const cusName = document.getElementById('cus-name');
