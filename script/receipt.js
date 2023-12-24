@@ -60,7 +60,9 @@ function fun15() {
     unpayedholder.id = 'hide-unpayed';
     balanceholder.id = 'hide-balance';
   }else {
-    document.querySelector('.a-payed').innerHTML = `0Frs` 
+    document.querySelector('.a-payed').innerHTML = `0Frs`
+    unpayedholder.id = 'hide-unpayed';
+    balanceholder.id = 'hide-balance'; 
   }
   
 }
@@ -83,7 +85,7 @@ function fun16() {
     const ane2 = Number(stotal1.innerHTML) + Number(stotal2.innerHTML);
     const ane3 = Number(stotal1.innerHTML) + Number(stotal2.innerHTML) + Number(stotal3.innerHTML);
     const ane4 = Number(stotal1.innerHTML) + Number(stotal2.innerHTML) + Number(stotal3.innerHTML) + Number(stotal4.innerHTML);
-  if (reciept2.classList.contains('hide-rcpt2') && reciept3.classList.contains('hide-rcpt3') && reciept4.classList.contains('hide-rcpt4') && reciept5.classList.contains('hide-rcpt5') && R1.innerHTML < 5 ) {
+  if (reciept2.classList.contains('hide-rcpt2') && reciept3.classList.contains('hide-rcpt3') && reciept4.classList.contains('hide-rcpt4') && reciept5.classList.contains('hide-rcpt5') && R1.innerHTML < 10 ) {
     total = ane1;
   }else if (!reciept2.classList.contains('hide-rcpt2') && reciept3.classList.contains('hide-rcpt3') && reciept4.classList.contains('hide-rcpt4') && reciept5.classList.contains('hide-rcpt5')) {
     total = ane2;
@@ -98,22 +100,26 @@ function fun16() {
   if (amountpayed.value !== '') {
    if (amountpayed.value < total && unpayedholder.classList.contains('hide-unpayed') && balanceholder.classList.contains ('hide-balance')){
       unpayedholder.classList.remove('hide-unpayed');
+      balanceholder.innerHTML = '';
       const bil = total - Number(amountpayed.value);
       document.querySelector('.unpayed').innerHTML = `${bil}Frs`
       console.log('hello'); 
     }else if (amountpayed.value < total && unpayedholder.classList.contains('hide-unpayed') && !balanceholder.classList.contains ('hide-balance')){
       balanceholder.classList.add('hide-balance');
+      balanceholder.innerHTML = '';
       unpayedholder.classList.remove('hide-unpayed');
       const bil = total - Number(amountpayed.value);
       document.querySelector('.unpayed').innerHTML = `${bil}Frs`;
       console.log('hello1'); 
     }else if (amountpayed.value > total && unpayedholder.classList.contains('hide-unpayed') && balanceholder.classList.contains ('hide-balance')) {
       balanceholder.classList.remove('hide-balance');
+      unpayedholder.innerHTML = '';
       const bl = Number(amountpayed.value) - total;
       document.querySelector('.balance').innerHTML = `${bl}Frs` ;
       console.log('hello2');
     }else if (amountpayed.value > total && !unpayedholder.classList.contains('hide-unpayed') && balanceholder.classList.contains ('hide-balance')) {
       unpayedholder.classList.add('hide-unpayed')
+      unpayedholder.innerHTML = '';
       balanceholder.classList.remove('hide-balance');
       const bl = Number(amountpayed.value) - total;
       document.querySelector('.balance').innerHTML = `${bl}Frs` ;
@@ -121,12 +127,19 @@ function fun16() {
     } else {
       unpayedholder.classList.add('hide-unpayed')
       balanceholder.classList.add('hide-balance');
+      unpayedholder.innerHTML = '';
+      balanceholder.innerHTML = '';
       console.log('hello4');
     }
-  } 
+  }else {
+    unpayedholder.classList.add('hide-unpayed')
+    balanceholder.classList.add('hide-balance');
+    unpayedholder.innerHTML = '';
+    balanceholder.innerHTML = '';
+  }
 
   const displayalert = document.querySelector('.alerat-bd');
-  if (reciept2.classList.contains('hide-rcpt2') && reciept3.classList.contains('hide-rcpt3') && reciept4.classList.contains('hide-rcpt4') && reciept5.classList.contains('hide-rcpt5') && R1.innerHTML < 5 ) {
+  if (reciept2.classList.contains('hide-rcpt2') && reciept3.classList.contains('hide-rcpt3') && reciept4.classList.contains('hide-rcpt4') && reciept5.classList.contains('hide-rcpt5') && R1.innerHTML <= 10 ) {
     displayalert.innerText = 'Added to Receipt-1';
     displayalert.classList.remove('hide-alert-js');
     setTimeout(() => {
@@ -179,7 +192,7 @@ function fun1() {
   document.querySelector('.Amount').innerHTML = (quantity.value)*(unit.innerHTML);
   if (description.value === 'emty') {
     unit.innerHTML = 0;
-  }else if (names.value === `emty`) {
+  }else if (names.value === ``) {
     unit.innerHTML = 0;
   }else if (description.value === 'Piece') {
     switch (description.value === 'Piece') {
