@@ -24,6 +24,10 @@
   left: 10px;
   font-size: 14px;
 }
+.hide-resultboxF{
+  height: 300px;
+  overflow: scroll;
+}
 .resultboxF li{
   text-align: start;
   padding-left: 3px;

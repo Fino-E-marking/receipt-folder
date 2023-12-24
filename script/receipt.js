@@ -27,7 +27,7 @@ addButton.addEventListener('click', fun3);
 deleteButton.addEventListener('click', fun4);
 addButton.addEventListener('click', fun11);
 newreceiptbook.addEventListener('click', fun14);
-addButton.addEventListener('click', fun16);
+addButton.addEventListener('click', fun18);
 
 function fun2() {
   document.querySelector('.Amount').innerHTML = (quantity.value)*(unit.innerHTML); 
@@ -56,13 +56,13 @@ function fun15() {
   const balanceholder = document.getElementById('hide-balance');
   const unpayedholder = document.getElementById('hide-unpayed');
   if (amountpayed.value !== '') {
-    document.querySelector('.a-payed').innerHTML = `${amountpayed.value}Frs`;
     unpayedholder.id = 'hide-unpayed';
     balanceholder.id = 'hide-balance';
+    document.querySelector('.a-payed').innerHTML = `${amountpayed.value}Frs`;
   }else {
-    document.querySelector('.a-payed').innerHTML = `0Frs`
     unpayedholder.id = 'hide-unpayed';
-    balanceholder.id = 'hide-balance'; 
+    balanceholder.id = 'hide-balance';
+    document.querySelector('.a-payed').innerHTML = `0Frs` 
   }
   
 }
@@ -100,44 +100,52 @@ function fun16() {
   if (amountpayed.value !== '') {
    if (amountpayed.value < total && unpayedholder.classList.contains('hide-unpayed') && balanceholder.classList.contains ('hide-balance')){
       unpayedholder.classList.remove('hide-unpayed');
-      balanceholder.innerHTML = '';
       const bil = total - Number(amountpayed.value);
       document.querySelector('.unpayed').innerHTML = `${bil}Frs`
       console.log('hello'); 
     }else if (amountpayed.value < total && unpayedholder.classList.contains('hide-unpayed') && !balanceholder.classList.contains ('hide-balance')){
       balanceholder.classList.add('hide-balance');
-      balanceholder.innerHTML = '';
       unpayedholder.classList.remove('hide-unpayed');
       const bil = total - Number(amountpayed.value);
       document.querySelector('.unpayed').innerHTML = `${bil}Frs`;
       console.log('hello1'); 
+    }else if (amountpayed.value < total && !unpayedholder.classList.contains('hide-unpayed') && balanceholder.classList.contains ('hide-balance')){
+      const bil = total - Number(amountpayed.value);
+      document.querySelector('.unpayed').innerHTML = `${bil}Frs`;
+      console.log('hello7'); 
     }else if (amountpayed.value > total && unpayedholder.classList.contains('hide-unpayed') && balanceholder.classList.contains ('hide-balance')) {
       balanceholder.classList.remove('hide-balance');
-      unpayedholder.innerHTML = '';
       const bl = Number(amountpayed.value) - total;
       document.querySelector('.balance').innerHTML = `${bl}Frs` ;
       console.log('hello2');
     }else if (amountpayed.value > total && !unpayedholder.classList.contains('hide-unpayed') && balanceholder.classList.contains ('hide-balance')) {
       unpayedholder.classList.add('hide-unpayed')
-      unpayedholder.innerHTML = '';
       balanceholder.classList.remove('hide-balance');
       const bl = Number(amountpayed.value) - total;
       document.querySelector('.balance').innerHTML = `${bl}Frs` ;
       console.log('hello3');
+    }else if (amountpayed.value > total && unpayedholder.classList.contains('hide-unpayed') && !balanceholder.classList.contains ('hide-balance')) {
+      const bl = Number(amountpayed.value) - total;
+      document.querySelector('.balance').innerHTML = `${bl}Frs` ;
+      console.log('hello8');
     } else {
       unpayedholder.classList.add('hide-unpayed')
       balanceholder.classList.add('hide-balance');
-      unpayedholder.innerHTML = '';
-      balanceholder.innerHTML = '';
       console.log('hello4');
     }
   }else {
     unpayedholder.classList.add('hide-unpayed')
     balanceholder.classList.add('hide-balance');
-    unpayedholder.innerHTML = '';
-    balanceholder.innerHTML = '';
   }
+}
 
+function fun18() {
+  const stotal1 = document.getElementById('sub-total');
+  const stotal2 = document.querySelector('.sub-total1-js');  
+  const stotal3 = document.getElementById('sub-tota2');  
+  const stotal4 = document.getElementById('sub-total3');
+  const stotal5 = document.getElementById('sub-tota2');
+  const R1 = document.querySelector('.R1');
   const displayalert = document.querySelector('.alerat-bd');
   if (reciept2.classList.contains('hide-rcpt2') && reciept3.classList.contains('hide-rcpt3') && reciept4.classList.contains('hide-rcpt4') && reciept5.classList.contains('hide-rcpt5') && R1.innerHTML <= 10 ) {
     displayalert.innerText = 'Added to Receipt-1';
@@ -1142,7 +1150,6 @@ function fun11() {
   discount.value = '';
   fun13();
   fun16();
-  fun16();
 }
 fun13()
 function fun13() {
@@ -1173,7 +1180,7 @@ function fun13() {
     const ane4 = Number(stotal1.innerHTML) + Number(stotal2.innerHTML) + Number(stotal3.innerHTML) + Number(stotal4.innerHTML);
     document.querySelector('.g-total').innerHTML = `${ane}Frs`;
   
-  if (reciept2.classList.contains('hide-rcpt2') && reciept3.classList.contains('hide-rcpt3') && reciept4.classList.contains('hide-rcpt4') && reciept5.classList.contains('hide-rcpt5') && R1.innerHTML < 5 ) {
+  if (reciept2.classList.contains('hide-rcpt2') && reciept3.classList.contains('hide-rcpt3') && reciept4.classList.contains('hide-rcpt4') && reciept5.classList.contains('hide-rcpt5') && R1.innerHTML <= 10 ) {
 
     document.querySelector('.g-total').innerHTML = `${ane1}Frs`;
   }else if (!reciept2.classList.contains('hide-rcpt2') && reciept3.classList.contains('hide-rcpt3') && reciept4.classList.contains('hide-rcpt4') && reciept5.classList.contains('hide-rcpt5')) {

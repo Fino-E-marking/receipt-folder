@@ -100,6 +100,11 @@ function funA() {
      return keyword.toLowerCase().includes(input.toLowerCase());
     });
   }
+  if (result.length > 15) {
+    resultbox.classList.add('hide-resultboxF');
+  }else {
+    resultbox.classList.remove('hide-resultboxF');
+  }
   display(result);
   hideB();
 }
