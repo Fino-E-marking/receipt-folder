@@ -111,17 +111,23 @@ function funA() {
 
 function display(result) {
   const content = result.map((list) => {
-    return "<li onclick=selectInput(this)>" + list + "</li>"
+   return `<li onclick="selectInput(this)" class="man">` + list +  "</li>";
+  // return `<li onclick="selectInput(this)" class="man">  ${list}  </li>`;
   })
 
-  resultbox.innerHTML = "<ul>" + content.join('') + "</ul>"
+  resultbox.innerHTML = "<ul>" + content.join('') + "</ul>";
+  const you = document.querySelectorAll('.man');
+  you.forEach(youvalue => {
+    youvalue.addEventListener('click', () => {
+      resultbox.classList.remove('hide-resultboxF');
+    })
+  });
 }
 
 function selectInput(list) {
   inputtbox.value = list.innerHTML;
   resultbox.innerHTML = '';
   resultbox.classList.add('hide-borded');
- 
 }
 
 hideB();
@@ -132,4 +138,3 @@ function hideB() {
     resultbox.classList.remove('hide-borded');
   }
 };
-

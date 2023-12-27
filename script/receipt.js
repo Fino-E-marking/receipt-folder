@@ -553,7 +553,7 @@ function fun1() {
         break;
     }
   }
-}console.log(description === 'Row');
+}
 
 function fun3() {
   const cusName = document.getElementById('cus-name');
