@@ -456,6 +456,7 @@ hr{
     justify-content: center;
     align-content: center;
     flex-direction: column;
+    display: block;
   }
   .small-mobile,.httaz{
     display: block;
@@ -471,6 +472,7 @@ hr{
     justify-content: center;
     align-content: center;
     align-items: center;
+    display: block;
     
   }
   .small-mobile h1{
