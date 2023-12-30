@@ -1,0 +1,481 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  padding-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+.title{
+  background-color: black;
+  color: blue;
+  font-size: 40px;
+  font-weight: bold;
+  max-width: 1000px;
+  text-align: center;
+  padding: 10px 0px;
+  flex: 1;
+}
+.title-holder{
+  display: flex;
+  justify-content: center;
+  padding-top: 1px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+#description{
+  width: 180px;
+}
+.add-cart-receipt{
+  width: 150px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.add-cart-receipt button{
+  padding: 3px 0px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.input{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  max-width: 1000px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.input div{
+  padding-left: 10px;
+}
+.add-to-cart-button{
+  background-color: green;
+  margin-bottom: 4px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.4 ease;
+}
+.add-to-cart-button:hover,.add-receipt-button:hover,.add-d:hover{
+  opacity: 0.9;
+}
+.add-to-cart-button:active,.add-receipt-button:active,.add-d:active,.printe-reciept:active{
+  opacity: 0.7;
+}
+.delete-action:hover{
+  opacity: 0.8;
+}
+.delete-action:active{
+  opacity: 0.6;
+}
+.add-receipt-button{
+  background-color: blue;
+  color: white;
+  border: solid;
+  border-color: black;
+  border-width: 1px;
+  cursor: pointer;
+  transition: 0.4 ease;
+}
+.printe-reciept{
+  margin-top: 3px;
+  border: solid;
+  border-width: 2px;
+  cursor: pointer;
+  transition: 0.4 ease;
+}
+.printe-reciept:hover{
+  background-color: rgb(19, 19, 19);
+  color: white;
+  border: none;
+  padding: 5px 0px;
+}
+.prices{
+  max-width: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.prices div,.cus-name-holder,.seller-name-holder,.amount-payed-holder,.discount-holder{
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+}
+.discount-holder{
+  color: green;
+  margin: 5px;
+}
+.amnt-div{
+  justify-content: center;
+}
+.prc-dic{
+  justify-content: end;
+}
+.cus-name-holder input,#serler-name,#discount,#amount-payed{
+  border: none;
+  font-size: 17px;
+  width: 400px;
+  margin-top: 2px;
+  align-items: start;
+  border-bottom:  dotted;
+  padding: 0px 5px;
+  cursor: pointer;
+}
+.mc{
+  max-width: 200px;
+}
+.reciept-holder{
+  margin-top: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.reciept-book{
+  max-width: 800px;
+  min-width: 750px;
+  display: grid;
+  grid-template-rows: 100px 1fr 20px;
+  min-height: 200px;
+  margin-top: 40px;
+}
+.R-cus-name,.p-seller,.cus-num{
+  flex: 1;
+  padding: 0;
+  max-width: 400px;
+  padding-left: 5px;
+}
+.current-date{
+  padding-left: 3px;
+}
+.reciept-header{
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  font-weight: bold;
+
+}
+.reciept-header div{
+  margin-bottom: 2px;
+}
+.ov-1 div:hover{
+  border: solid;
+  border-color: brown;
+}
+.rt-1,.rt-5{
+  font-weight: bold;
+  font-size: 20px;
+  font-family: arial;
+}
+.rt-5{
+  font-size: 17px;
+  padding-left: 8px;
+}
+.rt-4,.rt-6,.r-seller,.rt-2{
+  display: flex;
+  align-content: center;
+}
+
+.reciept-body{
+  margin-top: 15px;
+  display: grid;
+  grid-template-rows: 22px 1fr;
+  background-color: black;
+  row-gap: 1px;
+  border: solid;
+  border-width: 1px;
+}
+.rb-header,.rb-body{
+  display: grid;
+  grid-template-columns: 290px 110px 90px 128px 128px 1fr;
+  text-align: center;
+  font-weight: bold;
+  background-color: black;
+  column-gap: 1px;
+}
+.rb-header div,.rb-body div{
+  background-color: white;
+}
+
+.rb-body{
+  min-height: 100px;
+}
+.total-holder{
+  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr 129px 130px;
+  text-align: center;
+
+}
+.total-holder p{
+  background-color: white;
+  font-weight: bold;
+}
+.t-text2{
+  text-align: start;
+}
+.t-text{
+  text-align: end;
+  padding-right: 5px;
+}
+.total-price{
+  border: solid;
+  border-width: 0px 1px 1px 1px;
+}
+.signature-section{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 5px;
+}
+.return-button,.d-cancel-button{
+  background-color: white;
+  border: solid;
+  border-width: 1px;
+  padding: 4px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.d-cancel-button{
+  height: 20px;
+  padding: 0px 3px;
+  margin-top: 2px;
+}
+.description2-input{
+  position: absolute;
+  border: solid;
+  border-width: 1px;
+  width: 80px;
+  padding: 2px;
+}
+
+.screen{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.abc{
+  text-align: start;
+  padding-left: 60px;
+  padding-bottom: 2px;
+}
+.abd{
+  text-align: start;
+  padding-left: 35px;
+  padding-bottom: 2px;
+}
+.una{
+  padding-left: 40px;
+}
+.unb{
+  padding-left: 45px;
+}
+
+
+@media print {
+  body{
+    padding-top: 0;
+  }
+  .mx,.rt-n{
+    display: none;
+  }
+  .rt-n,#rr2{
+    display: none;
+  }
+  .reciept-body{
+    border: solid;
+    border-width: 2px;
+  }
+  .rb-header div,#m2{
+    border: solid;
+    border-width: 0px 1px 0px 0px;
+    margin-bottom: 0;
+  }
+  /*.rb-header{
+    border: solid;
+    border-width: 0px 0px 1px 0px; 
+  }*/
+  .abc,.abd{
+    border: solid;
+    border-width: 0px 1px 0px 0px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .una{
+    border-width: 0px;
+  }
+  .rb-header,.rb-body{
+    grid-template-columns: 290px 110px 90px 128px 128px;
+    column-gap: 0;
+    row-gap: 0;
+  }
+  .dt-a,.title-holder,.rt-n{
+    display: none;
+  }
+  .reciept-footer{
+    width: 100%;
+  }
+}
+
+.delete-action{
+  background-color: red;
+  color: white;
+  padding: 2px 5px;
+  border: none;
+}
+hr{
+  border: solid;
+  border-width: 1px 0px 0px 0px;
+}
+
+/*.Newr-js{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  min-height: 400px;
+  margin-top: 40px;
+  row-gap: 40px;
+  max-width: 2100px;
+}
+/*.Newr-js .reciept-book{
+  max-height: 370px;
+  min-height: 200px;
+}
+.rpt-second-contain{
+  
+  background-color: blue;
+}
+
+#man{
+  background-color: blue;
+}
+
+/* switch for new receipts 
+#reciept-bd-00001,#reciept-bd-00012{
+  display: none;
+}*/
+
+
+.r-notist{
+ background-color: black;
+ font-weight: bold;
+ display: grid;
+ width: 410px;
+ grid-template-columns: 150px 50px 50px 50px 50px 50px;
+ border: solid;
+ border-width: 1px;
+ column-gap: 2px;
+ row-gap: 2px;
+ position: absolute;
+ top: 210px;
+ right: 5%;
+
+}
+.r-notis-header{
+ background-color: black;
+}
+.r-notist div{
+  background-color: white;
+  padding-left: 5px;
+}
+
+.reciept-footer{
+  font-weight: bold;
+  text-align: start;
+  width: 83%;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+.f-a{
+  display: flex;
+}
+.first-rpt{
+  margin: 0;
+}
+.p1{
+  width: 165px;
+}
+.balance,.a-payed,.g-total,.n-items{
+  flex: 1;
+}
+
+.add-d  {
+  width: 100px;
+  margin-left: 20px;
+  color: white;
+  font-weight: bold;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4 ease;
+}
+
+.hide-balance,.hide-unpayed,.hide-rcpt2,.hide-rcpt3,.hide-rcpt4,.hide-rcpt5{
+  display: none;
+}
+
+.alerat-bd{
+  color: green;
+  font-weight: bold;
+  font-size: 23px;
+  width: 200px;
+  position: absolute;
+  top: 55px;
+  left: 40%;
+  right: 40%;
+}
+.hide-alert-js{
+  display: none;
+}
+.input{
+  position: relative;
+}
+
+
+
+
+.diplay-mesage{
+  text-align: center;
+}
+.small-mobile{
+  display: none;
+}
+@media only screen and (max-width: 816px) {
+  
+  .reciept-holder,.r-notist,.title-holder,.mx{
+    display: none;
+  }
+  body{
+    padding: 0;
+    background-color: black;
+    
+  }
+  .diplay-mesage{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+  }
+  .small-mobile{
+    display: block;
+  }
+  .small-mobile{
+    background-color: black;
+    color: white;
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    
+  }
+  .small-mobile h1{
+    text-align: center;
+  }
+}
