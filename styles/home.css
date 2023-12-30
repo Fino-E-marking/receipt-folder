@@ -437,7 +437,7 @@ hr{
 
 
 
-.small-mobile,.small-mobile * {
+.small-mobile,.httaz{
   display: none;
 }
 @media only screen and (max-width: 816px) {
@@ -457,7 +457,7 @@ hr{
     align-content: center;
     flex-direction: column;
   }
-  .small-mobile{
+  .small-mobile,.httaz{
     display: block;
   }
   .small-mobile{
@@ -475,5 +475,10 @@ hr{
   }
   .small-mobile h1{
     text-align: center;
+  }
+}
+@media only screen and (min-width: 816px){
+  .small-mobile,.httaz{
+    display: none;
   }
 }
