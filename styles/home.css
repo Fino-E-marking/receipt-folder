@@ -436,10 +436,8 @@ hr{
 
 
 
-.diplay-mesage{
-  text-align: center;
-}
-.small-mobile{
+
+.small-mobile,.small-mobile * {
   display: none;
 }
 @media only screen and (max-width: 816px) {
