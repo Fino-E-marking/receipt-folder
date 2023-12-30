@@ -432,3 +432,50 @@ hr{
 .input{
   position: relative;
 }
+
+
+
+
+.diplay-mesage{
+  text-align: center;
+}
+.small-mobile{
+  display: none;
+}
+@media only screen and (max-width: 816px) {
+  
+  .reciept-holder,.r-notist,.title-holder,.mx{
+    display: none;
+  }
+  body{
+    padding: 0;
+    background-color: black;
+    
+  }
+  .diplay-mesage{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+  }
+  .small-mobile{
+    display: block;
+  }
+  .small-mobile{
+    background-color: black;
+    color: white;
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    
+  }
+  .small-mobile h1{
+    text-align: center;
+  }
+}
